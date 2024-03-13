@@ -1,5 +1,4 @@
 #!/usr/bin/env python3
-
 import rospy
 import cv2
 import torch
@@ -10,10 +9,10 @@ from pathlib import Path
 import os
 import sys
 from rostopic import get_topic_type
+import time
 
 from sensor_msgs.msg import Image, CompressedImage
 from detection_msgs.msg import BoundingBox, BoundingBoxes
-
 
 # add yolov5 submodule to path
 FILE = Path(__file__).resolve()
@@ -100,9 +99,19 @@ class Yolov5Detector:
         
         # Initialize CV_Bridge
         self.bridge = CvBridge()
+        
+        # Initialize FPS variables
+        self.prev_time = time.time()
+        self.fps = 0
 
     def callback(self, data):
         """adapted from yolov5/detect.py"""
+        # Calculate FPS
+        current_time = time.time()
+        elapsed_time = current_time - self.prev_time
+        self.prev_time = current_time
+        self.fps = 1.0 / elapsed_time
+        
         # print(data.header)
         if self.compressed_input:
             im = self.bridge.compressed_imgmsg_to_cv2(data, desired_encoding="bgr8")
@@ -171,6 +180,8 @@ class Yolov5Detector:
 
         # Publish & visualize images
         if self.view_image:
+            # Add FPS text to the frame
+            cv2.putText(im0, f"FPS: {self.fps:.2f}", (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 1, (0, 255, 0), 2)
             cv2.imshow(str(0), im0)
             cv2.waitKey(1)  # 1 millisecond
         if self.publish_image:
@@ -198,3 +209,4 @@ if __name__ == "__main__":
     detector = Yolov5Detector()
     
     rospy.spin()
+
