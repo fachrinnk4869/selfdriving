@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/catkin_ws/src/realsense-ros/realsense2_description
+CMAKE_SOURCE_DIR = /home/jetson/catkin_ws/src/ros-realsense/realsense2_description
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jetson/catkin_ws/build/realsense2_description
@@ -71,6 +71,6 @@ CMakeFiles/clean_test_results.dir/clean:
 .PHONY : CMakeFiles/clean_test_results.dir/clean
 
 CMakeFiles/clean_test_results.dir/depend:
-	cd /home/jetson/catkin_ws/build/realsense2_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/catkin_ws/src/realsense-ros/realsense2_description /home/jetson/catkin_ws/src/realsense-ros/realsense2_description /home/jetson/catkin_ws/build/realsense2_description /home/jetson/catkin_ws/build/realsense2_description /home/jetson/catkin_ws/build/realsense2_description/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/catkin_ws/build/realsense2_description && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/catkin_ws/src/ros-realsense/realsense2_description /home/jetson/catkin_ws/src/ros-realsense/realsense2_description /home/jetson/catkin_ws/build/realsense2_description /home/jetson/catkin_ws/build/realsense2_description /home/jetson/catkin_ws/build/realsense2_description/CMakeFiles/clean_test_results.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/clean_test_results.dir/depend
 

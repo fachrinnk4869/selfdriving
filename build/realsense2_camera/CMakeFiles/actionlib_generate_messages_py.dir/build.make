@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/catkin_ws/src/realsense-ros/realsense2_camera
+CMAKE_SOURCE_DIR = /home/jetson/catkin_ws/src/ros-realsense/realsense2_camera
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jetson/catkin_ws/build/realsense2_camera
@@ -67,6 +67,6 @@ CMakeFiles/actionlib_generate_messages_py.dir/clean:
 .PHONY : CMakeFiles/actionlib_generate_messages_py.dir/clean
 
 CMakeFiles/actionlib_generate_messages_py.dir/depend:
-	cd /home/jetson/catkin_ws/build/realsense2_camera && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/catkin_ws/src/realsense-ros/realsense2_camera /home/jetson/catkin_ws/src/realsense-ros/realsense2_camera /home/jetson/catkin_ws/build/realsense2_camera /home/jetson/catkin_ws/build/realsense2_camera /home/jetson/catkin_ws/build/realsense2_camera/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/catkin_ws/build/realsense2_camera && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/catkin_ws/src/ros-realsense/realsense2_camera /home/jetson/catkin_ws/src/ros-realsense/realsense2_camera /home/jetson/catkin_ws/build/realsense2_camera /home/jetson/catkin_ws/build/realsense2_camera /home/jetson/catkin_ws/build/realsense2_camera/CMakeFiles/actionlib_generate_messages_py.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/actionlib_generate_messages_py.dir/depend
 

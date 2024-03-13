@@ -67,7 +67,7 @@ set(realsense2_description_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(realsense2_description_SOURCE_PREFIX /home/jetson/catkin_ws/src/realsense-ros/realsense2_description)
+  set(realsense2_description_SOURCE_PREFIX /home/jetson/catkin_ws/src/ros-realsense/realsense2_description)
   set(realsense2_description_DEVEL_PREFIX /home/jetson/catkin_ws/devel/.private/realsense2_description)
   set(realsense2_description_INSTALL_PREFIX "")
   set(realsense2_description_PREFIX ${realsense2_description_DEVEL_PREFIX})

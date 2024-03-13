@@ -43,7 +43,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/catkin_ws/src/realsense-ros/realsense2_camera
+CMAKE_SOURCE_DIR = /home/jetson/catkin_ws/src/ros-realsense/realsense2_camera
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jetson/catkin_ws/build/realsense2_camera
@@ -94,6 +94,6 @@ gtest/googletest/CMakeFiles/gtest_main.dir/clean:
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/clean
 
 gtest/googletest/CMakeFiles/gtest_main.dir/depend:
-	cd /home/jetson/catkin_ws/build/realsense2_camera && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/catkin_ws/src/realsense-ros/realsense2_camera /usr/src/googletest/googletest /home/jetson/catkin_ws/build/realsense2_camera /home/jetson/catkin_ws/build/realsense2_camera/gtest/googletest /home/jetson/catkin_ws/build/realsense2_camera/gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/jetson/catkin_ws/build/realsense2_camera && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/jetson/catkin_ws/src/ros-realsense/realsense2_camera /usr/src/googletest/googletest /home/jetson/catkin_ws/build/realsense2_camera /home/jetson/catkin_ws/build/realsense2_camera/gtest/googletest /home/jetson/catkin_ws/build/realsense2_camera/gtest/googletest/CMakeFiles/gtest_main.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : gtest/googletest/CMakeFiles/gtest_main.dir/depend
 

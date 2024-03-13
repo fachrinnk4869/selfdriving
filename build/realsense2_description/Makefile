@@ -48,7 +48,7 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/jetson/catkin_ws/src/realsense-ros/realsense2_description
+CMAKE_SOURCE_DIR = /home/jetson/catkin_ws/src/ros-realsense/realsense2_description
 
 # The top-level build directory on which CMake was run.
 CMAKE_BINARY_DIR = /home/jetson/catkin_ws/build/realsense2_description

@@ -1,4 +1,4 @@
-realsense-ros/realsense2_description
+ros-realsense/realsense2_description
 /home/jetson/catkin_ws/devel/.private/realsense2_description/cmake.lock /home/jetson/catkin_ws/devel/./cmake.lock
 /home/jetson/catkin_ws/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake /home/jetson/catkin_ws/devel/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake
 /home/jetson/catkin_ws/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake /home/jetson/catkin_ws/devel/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake

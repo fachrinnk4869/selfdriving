@@ -1,4 +1,4 @@
-realsense-ros/realsense2_camera
+ros-realsense/realsense2_camera
 /home/jetson/catkin_ws/devel/.private/realsense2_camera/cmake.lock /home/jetson/catkin_ws/devel/./cmake.lock
 /home/jetson/catkin_ws/devel/.private/realsense2_camera/include/realsense2_camera/Extrinsics.h /home/jetson/catkin_ws/devel/include/realsense2_camera/Extrinsics.h
 /home/jetson/catkin_ws/devel/.private/realsense2_camera/include/realsense2_camera/DeviceInfo.h /home/jetson/catkin_ws/devel/include/realsense2_camera/DeviceInfo.h
