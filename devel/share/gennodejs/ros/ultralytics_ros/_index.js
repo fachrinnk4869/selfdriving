@@ -1,0 +1,1 @@
+/home/jetson/catkin_ws/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/_index.js
