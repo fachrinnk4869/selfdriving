@@ -17,6 +17,7 @@
 # You should have received a copy of the GNU Affero General Public License
 # along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
+import cv2
 import cv_bridge
 import numpy as np
 import roslib.packages
@@ -26,12 +27,20 @@ from ultralytics import YOLO
 from ultralytics import RTDETR
 from vision_msgs.msg import Detection2D, Detection2DArray, ObjectHypothesisWithPose
 from ultralytics_ros.msg import YoloResult
-import cv2
 import time
+from jtop import jtop
+import matplotlib.pyplot as plt
+from matplotlib.animation import FuncAnimation
+import json
+import subprocess
+# import os
+import tensorrt as trt  
+from pathlib import Path
 
-
+path = roslib.packages.get_pkg_dir("ultralytics_ros")
 class TrackerNode:
     def __init__(self):
+        cv2.cuda.setDevice(0)
         yolo_model = rospy.get_param("~yolo_model", "yolov8n.pt")
         self.input_topic = rospy.get_param("~input_topic", "image_raw")
         self.result_topic = rospy.get_param("~result_topic", "yolo_result")
@@ -49,12 +58,23 @@ class TrackerNode:
         self.result_font = rospy.get_param("~result_font", "Arial.ttf")
         self.result_labels = rospy.get_param("~result_labels", True)
         self.result_boxes = rospy.get_param("~result_boxes", True)
-        path = roslib.packages.get_pkg_dir("ultralytics_ros")
+        
         if(yolo_model.startswith("rtdetr")):
             self.model = RTDETR(f"{path}/models/{yolo_model}")
         else:
             self.model = YOLO(f"{path}/models/{yolo_model}")
         self.model.fuse()
+
+
+        # Load the exported TensorRT model
+        if(yolo_model.startswith("rtdetr")):
+             self.model.export(format='onnx',opset=17,simplify=True,half=True)
+             preprocess()
+             self.model = RTDETR(f"{path}/models/rtdetr-l.engine")
+        else:
+             self.model.export(format='engine')  # creates 'yolov8n.engine'
+             self.model = YOLO(f"{path}/models/{Path(yolo_model).with_suffix('.engine')}")
+        
         self.sub = rospy.Subscriber(
             self.input_topic,
             Image,
@@ -85,6 +105,7 @@ class TrackerNode:
         elapsed_time = current_time - self.prev_time
         self.prev_time = current_time
         self.fps = 1.0 / elapsed_time 
+
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
         # Display FPS on the image
         cv2.putText(
@@ -97,7 +118,8 @@ class TrackerNode:
             self.font_thickness,
             cv2.LINE_AA,
         )
-        results = self.model.track(
+        
+        results = self.model(
             source=cv_image,
             conf=self.conf_thres,
             iou=self.iou_thres,
@@ -170,8 +192,64 @@ class TrackerNode:
                     masks_msg.append(mask_image_msg)
         return masks_msg
 
+    def restart_jtop_service():
+        subprocess.run(['sudo', 'systemctl', 'restart', 'jtop.service'])
+    def update_plot(frame):
+        global gpu_data, mem_data, ax1, ax2
+        with jtop() as jetson:
+            gpu_usage = jetson.stats['GPU']
+            gpu_data.append(gpu_usage)
+            mem_usage = jetson.stats['RAM']
+            mem_data.append(mem_usage)
+            ax1.clear()
+            ax1.plot(gpu_data)
+            ax1.set_title('GPU Usage (%)')
+            ax1.set_xlabel('Time')
+            ax1.set_ylabel('Usage (%)')
+            ax2.clear()
+            ax2.plot(mem_data)
+            ax2.set_title('Memory Usage (%)')
+            ax2.set_xlabel('Time')
+            ax2.set_ylabel('Usage (%)')
 
+def preprocess():
+    f_onnx = f"{path}/models/rtdetr-l.onnx"
+    file = Path(f_onnx)
+    f = file.with_suffix('.engine')   
+
+    TRT_LOGGER = trt.Logger(trt.Logger.WARNING)  
+    builder = trt.Builder(TRT_LOGGER)
+    network = builder.create_network(1 << int(trt.NetworkDefinitionCreationFlag.EXPLICIT_BATCH))
+    parser = trt.OnnxParser(network, TRT_LOGGER)
+
+    success = parser.parse_from_file(f_onnx)
+    for idx in range(parser.num_errors):
+        print(parser.get_error(idx))
+
+    if not success:
+        pass # Error handling code here
+
+    config = builder.create_builder_config()
+
+    config.set_memory_pool_limit(trt.MemoryPoolType.WORKSPACE, 1 << 30) # 1 MiB
+    config.set_tactic_sources(1 << int(trt.TacticSource.CUBLAS))
+
+    config.set_flag(trt.BuilderFlag.FP16) # set f16
+
+    serialized_engine = builder.build_serialized_network(network, config)
+
+
+    metadata = {'description': 'Ultralytics rtdetr-l...sunny.yaml', 'author': 'Ultralytics', 'license': 'AGPL-3.0 https://ult...om/license', 'date': '2024-03-09T19:14:58.861682', 'version': '8.0.230', 'stride': 32, 'task': 'detect', 'batch': 1, 'imgsz': [640, 640], 'names': {0: 'bus', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'person', 5: 'rider', 6: 'truck'}}
+    t = open(f, 'wb')
+    meta = json.dumps(metadata)
+    t.write(len(meta).to_bytes(4, byteorder='little', signed=True))
+    t.write(meta.encode())
+    # Model
+    t.write(serialized_engine)
+
+    t.close()
 if __name__ == "__main__":
     rospy.init_node("tracker_node")
     node = TrackerNode()
+    subprocess.run(['python3', f"{path}/cek_gpu.py"])
     rospy.spin()
