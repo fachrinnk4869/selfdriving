@@ -1,5 +1,0 @@
-Symlinking /home/jetson/catkin_ws/devel/share/yolov5_ros/cmake/yolov5_rosConfig.cmake
-Symlinking /home/jetson/catkin_ws/devel/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake
-Symlinking /home/jetson/catkin_ws/devel/lib/pkgconfig/yolov5_ros.pc
-Symlinking /home/jetson/catkin_ws/devel/lib/yolov5_ros/cmake.lock
-Symlinking /home/jetson/catkin_ws/devel/lib/yolov5_ros/detect.py
