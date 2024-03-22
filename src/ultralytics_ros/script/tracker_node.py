@@ -25,6 +25,7 @@ import rospy
 from sensor_msgs.msg import Image
 from ultralytics import YOLO
 from ultralytics import RTDETR
+import signal   
 from vision_msgs.msg import Detection2D, Detection2DArray, ObjectHypothesisWithPose
 from ultralytics_ros.msg import YoloResult
 import time
@@ -33,19 +34,22 @@ import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 import json
 import subprocess
-# import os
+import os
 import tensorrt as trt  
+import sys
+import csv
 from pathlib import Path
 
 path = roslib.packages.get_pkg_dir("ultralytics_ros")
+
 class TrackerNode:
     def __init__(self):
         cv2.cuda.setDevice(0)
-        yolo_model = rospy.get_param("~yolo_model", "yolov8n.pt")
         self.input_topic = rospy.get_param("~input_topic", "image_raw")
         self.result_topic = rospy.get_param("~result_topic", "yolo_result")
         self.result_image_topic = rospy.get_param(
             "~result_image_topic", "yolo_image")
+        self.yolo_model = rospy.get_param("~yolo_model", "yolov8n.pt")
         self.conf_thres = rospy.get_param("~conf_thres", 0.25)
         self.iou_thres = rospy.get_param("~iou_thres", 0.45)
         self.max_det = rospy.get_param("~max_det", 300)
@@ -58,22 +62,24 @@ class TrackerNode:
         self.result_font = rospy.get_param("~result_font", "Arial.ttf")
         self.result_labels = rospy.get_param("~result_labels", True)
         self.result_boxes = rospy.get_param("~result_boxes", True)
+        self.is_tensorrt = rospy.get_param("~is_tensorrt", False)
         
-        if(yolo_model.startswith("rtdetr")):
-            self.model = RTDETR(f"{path}/models/{yolo_model}")
+        if(self.yolo_model.startswith("rtdetr")):
+            self.model = RTDETR(f"{path}/models/{self.yolo_model}")
         else:
-            self.model = YOLO(f"{path}/models/{yolo_model}")
+            self.model = YOLO(f"{path}/models/{self.yolo_model}")
         self.model.fuse()
 
 
         # Load the exported TensorRT model
-        if(yolo_model.startswith("rtdetr")):
-             self.model.export(format='onnx',opset=17,simplify=True,half=True)
-             preprocess()
-             self.model = RTDETR(f"{path}/models/rtdetr-l.engine")
-        else:
-             self.model.export(format='engine')  # creates 'yolov8n.engine'
-             self.model = YOLO(f"{path}/models/{Path(yolo_model).with_suffix('.engine')}")
+        if self.is_tensorrt is True:
+            if(self.yolo_model.startswith("rtdetr")):
+                self.model.export(format='onnx',opset=17,simplify=True,half=True)
+                preprocess()
+                self.model = RTDETR(f"{path}/models/rtdetr-l.engine")
+            else:
+                self.model.export(format='engine')  # creates 'yolov8n.engine'
+                self.model = YOLO(f"{path}/models/{Path(self.yolo_model).with_suffix('.engine')}")
         
         self.sub = rospy.Subscriber(
             self.input_topic,
@@ -88,7 +94,7 @@ class TrackerNode:
             self.result_image_topic, Image, queue_size=1
         )
         self.bridge = cv_bridge.CvBridge()
-        self.use_segmentation = yolo_model.endswith("-seg.pt")
+        self.use_segmentation = self.yolo_model.endswith("-seg.pt")
         # Initialize font for displaying FPS
         self.font = cv2.FONT_HERSHEY_SIMPLEX
         self.font_scale = 1
@@ -98,14 +104,34 @@ class TrackerNode:
         # Initialize FPS variables
         self.prev_time = time.time()
         self.fps = 0
+        self.csv_filename = f"{path}/fps_{self.yolo_model}.csv"
+        self.fps_timer = time.time()  # Timer to track FPS
+        self.fps_interval = 1  # Interval to collect FPS (in seconds)
+        self.no=1
 
+        # Initialize CSV file and write headers
+        with open(self.csv_filename, mode='w') as csv_file:
+            writer = csv.writer(csv_file)
+            writer.writerow(['no', 'fps'])
+
+    def save_fps_to_csv(self):
+        current_time = time.time()
+        elapsed_time = current_time - self.fps_timer
+        if elapsed_time >= self.fps_interval:
+            fps_data = [self.no, self.fps]  # Assuming 'no' and 'fps' are already defined
+            self.no = self.no +1
+            with open(self.csv_filename, mode='a') as csv_file:
+                writer = csv.writer(csv_file)
+                writer.writerow(fps_data)
+            self.fps_timer = current_time
     def image_callback(self, msg):
        # Calculate FPS
         current_time = time.time()
         elapsed_time = current_time - self.prev_time
         self.prev_time = current_time
         self.fps = 1.0 / elapsed_time 
-
+        # Calculate FPS
+        self.save_fps_to_csv()
         cv_image = self.bridge.imgmsg_to_cv2(msg, desired_encoding="bgr8")
         # Display FPS on the image
         cv2.putText(
@@ -248,8 +274,11 @@ def preprocess():
     t.write(serialized_engine)
 
     t.close()
+
 if __name__ == "__main__":
     rospy.init_node("tracker_node")
     node = TrackerNode()
-    subprocess.run(['python3', f"{path}/cek_gpu.py"])
+    yolo_model = node.yolo_model
+    process=subprocess.run(['python3', f"{path}/cek_gpu.py", f"{path}/gpu_mem_{yolo_model}.csv", f"{path}/plot_{yolo_model}.png"])
+    
     rospy.spin()
