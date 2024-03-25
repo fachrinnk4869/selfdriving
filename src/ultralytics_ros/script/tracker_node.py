@@ -25,6 +25,8 @@ import rospy
 from sensor_msgs.msg import Image
 from ultralytics import YOLO
 from ultralytics import RTDETR
+from ultralytics.utils import ASSETS
+from ultralytics.models.yolo.detect import DetectionPredictor
 import signal   
 from vision_msgs.msg import Detection2D, Detection2DArray, ObjectHypothesisWithPose
 from ultralytics_ros.msg import YoloResult
@@ -39,6 +41,7 @@ import tensorrt as trt
 import sys
 import csv
 from pathlib import Path
+import inspect
 
 path = roslib.packages.get_pkg_dir("ultralytics_ros")
 
@@ -63,6 +66,7 @@ class TrackerNode:
         self.result_labels = rospy.get_param("~result_labels", True)
         self.result_boxes = rospy.get_param("~result_boxes", True)
         self.is_tensorrt = rospy.get_param("~is_tensorrt", False)
+        print(os.path.abspath(inspect.getfile(DetectionPredictor)))
         
         if(self.yolo_model.startswith("rtdetr")):
             self.model = RTDETR(f"{path}/models/{self.yolo_model}")
@@ -74,11 +78,11 @@ class TrackerNode:
         # Load the exported TensorRT model
         if self.is_tensorrt is True:
             if(self.yolo_model.startswith("rtdetr")):
-                self.model.export(format='onnx',opset=17,simplify=True,half=True)
+                self.model.export(format='onnx',half=True, imgsz=640)
                 preprocess()
                 self.model = RTDETR(f"{path}/models/rtdetr-l.engine")
             else:
-                self.model.export(format='engine')  # creates 'yolov8n.engine'
+                self.model.export(format='engine',half=True, batch=32)  # creates 'yolov8n.engine'
                 self.model = YOLO(f"{path}/models/{Path(self.yolo_model).with_suffix('.engine')}")
         
         self.sub = rospy.Subscriber(
@@ -145,7 +149,7 @@ class TrackerNode:
             cv2.LINE_AA,
         )
         
-        results = self.model(
+        results = self.model.predict(
             source=cv_image,
             conf=self.conf_thres,
             iou=self.iou_thres,
@@ -155,6 +159,7 @@ class TrackerNode:
             device=self.device,
             verbose=False,
             retina_masks=True,
+            save=True,visualize=False,profile=True
         )
 
         if results is not None:
@@ -265,7 +270,7 @@ def preprocess():
     serialized_engine = builder.build_serialized_network(network, config)
 
 
-    metadata = {'description': 'Ultralytics rtdetr-l...sunny.yaml', 'author': 'Ultralytics', 'license': 'AGPL-3.0 https://ult...om/license', 'date': '2024-03-09T19:14:58.861682', 'version': '8.0.230', 'stride': 32, 'task': 'detect', 'batch': 1, 'imgsz': [640, 640], 'names': {0: 'bus', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'person', 5: 'rider', 6: 'truck'}}
+    metadata = {'description': 'Ultralytics rtdetr-l...sunny.yaml', 'author': 'Ultralytics', 'license': 'AGPL-3.0 https://ult...om/license', 'date': '', 'version': '8.1.27', 'stride': 32, 'task': 'detect', 'batch': 1, 'imgsz': [640, 640], 'names': {0: 'bus', 1: 'bicycle', 2: 'car', 3: 'motorcycle', 4: 'person', 5: 'rider', 6: 'truck'}}
     t = open(f, 'wb')
     meta = json.dumps(metadata)
     t.write(len(meta).to_bytes(4, byteorder='little', signed=True))
@@ -276,9 +281,12 @@ def preprocess():
     t.close()
 
 if __name__ == "__main__":
+    start_latency = time.time()
     rospy.init_node("tracker_node")
     node = TrackerNode()
     yolo_model = node.yolo_model
     process=subprocess.run(['python3', f"{path}/cek_gpu.py", f"{path}/gpu_mem_{yolo_model}.csv", f"{path}/plot_{yolo_model}.png"])
-    
+    latency = time.time() - start_latency
+    with open(f"{path}/latency_{yolo_model}.csv", 'w') as f:
+        f.write(latency)
     rospy.spin()
