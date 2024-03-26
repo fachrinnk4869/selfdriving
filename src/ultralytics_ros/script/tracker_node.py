@@ -276,9 +276,13 @@ def preprocess():
     t.close()
 
 if __name__ == "__main__":
+    start_latency = time.time()
     rospy.init_node("tracker_node")
     node = TrackerNode()
     yolo_model = node.yolo_model
     process=subprocess.run(['python3', f"{path}/cek_gpu.py", f"{path}/gpu_mem_{yolo_model}.csv", f"{path}/plot_{yolo_model}.png"])
-    
+    latency = time.time() - start_latency
+    with open(f"{path}/latency_{yolo_model}_tensorrt.csv", 'w') as f:
+        f.write(f"{latency}")
+        f.close()
     rospy.spin()
