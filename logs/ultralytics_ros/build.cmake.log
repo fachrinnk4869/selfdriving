@@ -1,27 +1,21 @@
 Not searching for unused variables given on the command line.
-[0mCMake Deprecation Warning at CMakeLists.txt:1 (cmake_minimum_required):
-  Compatibility with CMake < 3.5 will be removed from a future version of
-  CMake.
-
-  Update the VERSION argument <min> value or use a ...<max> suffix to tell
-  CMake that the project does not need compatibility with older versions.
-
-[0m
 [36m--[0m The C compiler identification is GNU 9.4.0
 [36m--[0m The CXX compiler identification is GNU 9.4.0
+[36m--[0m Check for working C compiler: /usr/bin/cc
+[36m--[0m Check for working C compiler: /usr/bin/cc -- works
 [36m--[0m Detecting C compiler ABI info
 [36m--[0m Detecting C compiler ABI info - done
-[36m--[0m Check for working C compiler: /usr/bin/cc - skipped
 [36m--[0m Detecting C compile features
 [36m--[0m Detecting C compile features - done
+[36m--[0m Check for working CXX compiler: /usr/bin/c++
+[36m--[0m Check for working CXX compiler: /usr/bin/c++ -- works
 [36m--[0m Detecting CXX compiler ABI info
 [36m--[0m Detecting CXX compiler ABI info - done
-[36m--[0m Check for working CXX compiler: /usr/bin/c++ - skipped
 [36m--[0m Detecting CXX compile features
 [36m--[0m Detecting CXX compile features - done
-[36m--[0m Using CATKIN_DEVEL_PREFIX: /home/jetson/catkin_ws/devel/.private/ultralytics_ros
-[36m--[0m Using CMAKE_PREFIX_PATH: /home/jetson/catkin_ws/devel;/opt/ros/noetic
-[36m--[0m This workspace overlays: /home/jetson/catkin_ws/devel;/opt/ros/noetic
+[36m--[0m Using CATKIN_DEVEL_PREFIX: /media/jetson/home/selfdriving/devel/.private/ultralytics_ros
+[36m--[0m Using CMAKE_PREFIX_PATH: /media/jetson/home/selfdriving/devel;/opt/ros/noetic
+[36m--[0m This workspace overlays: /media/jetson/home/selfdriving/devel;/opt/ros/noetic
 [36m--[0m Found PythonInterp: /usr/bin/python3 (found suitable version "3.8.10", minimum required is "3")
 [36m--[0m Using PYTHON_EXECUTABLE: /usr/bin/python3
 [36m--[0m Using Debian Python package layout
@@ -29,34 +23,10 @@ Not searching for unused variables given on the command line.
 [36m--[0m Using empy: /usr/lib/python3/dist-packages/em.py
 [36m--[0m Using CATKIN_ENABLE_TESTING: ON
 [36m--[0m Call enable_testing()
-[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /home/jetson/catkin_ws/build/ultralytics_ros/test_results
+[36m--[0m Using CATKIN_TEST_RESULTS_DIR: /media/jetson/home/selfdriving/build/ultralytics_ros/test_results
 [36m--[0m Forcing gtest/gmock from source, though one was otherwise available.
 [36m--[0m Found gtest sources under '/usr/src/googletest': gtests will be built
 [36m--[0m Found gmock sources under '/usr/src/googletest': gmock will be built
-[0mCMake Deprecation Warning at /usr/src/googletest/CMakeLists.txt:4 (cmake_minimum_required):
-  Compatibility with CMake < 3.5 will be removed from a future version of
-  CMake.
-
-  Update the VERSION argument <min> value or use a ...<max> suffix to tell
-  CMake that the project does not need compatibility with older versions.
-
-[0m
-[0mCMake Deprecation Warning at /usr/src/googletest/googlemock/CMakeLists.txt:45 (cmake_minimum_required):
-  Compatibility with CMake < 3.5 will be removed from a future version of
-  CMake.
-
-  Update the VERSION argument <min> value or use a ...<max> suffix to tell
-  CMake that the project does not need compatibility with older versions.
-
-[0m
-[0mCMake Deprecation Warning at /usr/src/googletest/googletest/CMakeLists.txt:56 (cmake_minimum_required):
-  Compatibility with CMake < 3.5 will be removed from a future version of
-  CMake.
-
-  Update the VERSION argument <min> value or use a ...<max> suffix to tell
-  CMake that the project does not need compatibility with older versions.
-
-[0m
 [36m--[0m Found PythonInterp: /usr/bin/python3 (found version "3.8.10")
 [36m--[0m Found Threads: TRUE
 [36m--[0m Using Python nosetests: /usr/bin/nosetests3
@@ -64,7 +34,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m BUILD_SHARED_LIBS is on
 [36m--[0m Using these message generators: gencpp;geneus;genlisp;gennodejs;genpy
 [36m--[0m Found Boost: /usr/lib/aarch64-linux-gnu/cmake/Boost-1.71.0/BoostConfig.cmake (found version "1.71.0")
-[36m--[0m Found CUDA: /usr/local/cuda-11.4 (found suitable exact version "11.4")
+[36m--[0m Found CUDA: /usr/local/cuda (found suitable exact version "11.4")
 [36m--[0m Found OpenCV: /usr/local (found version "4.5.4")
 [36m--[0m Checking for module 'eigen3'
 [36m--[0m   Found eigen3, version 3.3.7
@@ -117,10 +87,10 @@ but not all the files it references.
 [36m--[0m OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
 [36m--[0m Found OpenNI2: /usr/lib/libOpenNI2.so
 [36m--[0m OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
-[0m** WARNING ** io features related to pcap will be disabled[0m
-[0m** WARNING ** io features related to png will be disabled[0m
+** WARNING ** io features related to pcap will be disabled
+** WARNING ** io features related to png will be disabled
 [36m--[0m Found libusb-1.0: /usr/include
-[0m** WARNING ** io features related to libusb-1.0 will be disabled[0m
+** WARNING ** io features related to libusb-1.0 will be disabled
 [36m--[0m OpenNI found (include: /usr/include/ni, lib: /usr/lib/libOpenNI.so)
 [36m--[0m OpenNI2 found (include: /usr/include/openni2, lib: /usr/lib/libOpenNI2.so)
 [36m--[0m Found Qhull: optimized;/usr/lib/aarch64-linux-gnu/libqhull.so;debug;/usr/lib/aarch64-linux-gnu/libqhull.so
@@ -176,6 +146,6 @@ but not all the files it references.
 [36m--[0m Found PCL_PEOPLE: /usr/lib/aarch64-linux-gnu/libpcl_people.so
 [36m--[0m Found PCL: pcl_common;pcl_kdtree;pcl_octree;pcl_search;pcl_sample_consensus;pcl_filters;pcl_io;pcl_features;pcl_ml;pcl_segmentation;pcl_visualization;pcl_surface;pcl_registration;pcl_keypoints;pcl_tracking;pcl_recognition;pcl_stereo;pcl_apps;pcl_outofcore;pcl_people;/usr/lib/aarch64-linux-gnu/libboost_system.so;/usr/lib/aarch64-linux-gnu/libboost_filesystem.so;/usr/lib/aarch64-linux-gnu/libboost_date_time.so;/usr/lib/aarch64-linux-gnu/libboost_iostreams.so;/usr/lib/aarch64-linux-gnu/libboost_regex.so;optimized;/usr/lib/aarch64-linux-gnu/libqhull.so;debug;/usr/lib/aarch64-linux-gnu/libqhull.so;/usr/lib/libOpenNI.so;/usr/lib/libOpenNI2.so;vtkChartsCore;vtkCommonColor;vtkCommonCore;vtksys;vtkCommonDataModel;vtkCommonMath;vtkCommonMisc;vtkCommonSystem;vtkCommonTransforms;vtkCommonExecutionModel;vtkFiltersGeneral;vtkCommonComputationalGeometry;vtkFiltersCore;vtkInfovisCore;vtkFiltersExtraction;vtkFiltersStatistics;vtkImagingFourier;vtkImagingCore;vtkalglib;vtkRenderingContext2D;vtkRenderingCore;vtkFiltersGeometry;vtkFiltersSources;vtkRenderingFreeType;/usr/lib/aarch64-linux-gnu/libfreetype.so;/usr/lib/aarch64-linux-gnu/libz.so;vtkFiltersModeling;vtkImagingSources;vtkInteractionStyle;vtkInteractionWidgets;vtkFiltersHybrid;vtkImagingColor;vtkImagingGeneral;vtkImagingHybrid;vtkIOImage;vtkDICOMParser;vtkmetaio;/usr/lib/aarch64-linux-gnu/libjpeg.so;/usr/lib/aarch64-linux-gnu/libpng.so;/usr/lib/aarch64-linux-gnu/libtiff.so;vtkRenderingAnnotation;vtkRenderingVolume;vtkIOXML;vtkIOCore;vtkIOXMLParser;/usr/lib/aarch64-linux-gnu/libexpat.so;vtkIOGeometry;vtkIOLegacy;vtkIOPLY;vtkRenderingLOD;vtkViewsContext2D;vtkViewsCore;vtkRenderingContextOpenGL2;vtkRenderingOpenGL2;FLANN::FLANN
 [36m--[0m ultralytics_ros: 1 messages, 0 services
-[36m--[0m Configuring done (5.9s)
-[36m--[0m Generating done (0.2s)
-[36m--[0m Build files have been written to: /home/jetson/catkin_ws/build/ultralytics_ros
+[36m--[0m Configuring done
+[36m--[0m Generating done
+[36m--[0m Build files have been written to: /media/jetson/home/selfdriving/build/ultralytics_ros

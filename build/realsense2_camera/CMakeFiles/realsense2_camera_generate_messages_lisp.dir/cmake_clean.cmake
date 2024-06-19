@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/jetson/catkin_ws/devel/.private/realsense2_camera/share/common-lisp/ros/realsense2_camera/msg/Extrinsics.lisp"
-  "/home/jetson/catkin_ws/devel/.private/realsense2_camera/share/common-lisp/ros/realsense2_camera/msg/IMUInfo.lisp"
-  "/home/jetson/catkin_ws/devel/.private/realsense2_camera/share/common-lisp/ros/realsense2_camera/msg/Metadata.lisp"
-  "/home/jetson/catkin_ws/devel/.private/realsense2_camera/share/common-lisp/ros/realsense2_camera/srv/DeviceInfo.lisp"
+  "/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/common-lisp/ros/realsense2_camera/msg/Extrinsics.lisp"
+  "/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/common-lisp/ros/realsense2_camera/msg/IMUInfo.lisp"
+  "/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/common-lisp/ros/realsense2_camera/msg/Metadata.lisp"
+  "/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/common-lisp/ros/realsense2_camera/srv/DeviceInfo.lisp"
   "CMakeFiles/realsense2_camera_generate_messages_lisp"
 )
 

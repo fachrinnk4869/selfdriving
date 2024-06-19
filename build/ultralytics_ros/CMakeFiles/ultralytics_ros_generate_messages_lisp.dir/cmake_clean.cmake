@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/home/jetson/catkin_ws/devel/.private/ultralytics_ros/share/common-lisp/ros/ultralytics_ros/msg/YoloResult.lisp"
+  "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/common-lisp/ros/ultralytics_ros/msg/YoloResult.lisp"
   "CMakeFiles/ultralytics_ros_generate_messages_lisp"
 )
 

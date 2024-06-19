@@ -1,1 +1,1 @@
-/home/jetson/catkin_ws/devel/.private/detection_msgs/share/detection_msgs/cmake/detection_msgsConfig-version.cmake
+/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/detection_msgs/cmake/detection_msgsConfig-version.cmake

@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/jetson/catkin_ws/devel/.private/ultralytics_ros:$CMAKE_PREFIX_PATH"
-export PWD='/home/jetson/catkin_ws/build/ultralytics_ros'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/jetson/catkin_ws/devel/.private/ultralytics_ros/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/jetson/catkin_ws/src/ultralytics_ros:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/media/jetson/home/selfdriving/devel/.private/ultralytics_ros:$CMAKE_PREFIX_PATH"
+export PWD='/media/jetson/home/selfdriving/build/ultralytics_ros'
+export ROSLISP_PACKAGE_DIRECTORIES="/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/media/jetson/home/selfdriving/src/ultralytics_ros:$ROS_PACKAGE_PATH"

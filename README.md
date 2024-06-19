@@ -1,3 +1,7 @@
+install ros-realsense2-camera 
+```
+sudo apt-get install ros-noetic-realsense2-camera
+```
 build catkin 
 ```
 catkin build

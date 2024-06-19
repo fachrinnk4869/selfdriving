@@ -1,6 +1,6 @@
-devel_space: /home/jetson/catkin_ws/devel
+devel_space: /media/jetson/home/selfdriving/devel
 install: false
-install_space: /home/jetson/catkin_ws/install
+install_space: /media/jetson/home/selfdriving/install
 profile: default
-source_space: /home/jetson/catkin_ws/src
-workspace: /home/jetson/catkin_ws
+source_space: /media/jetson/home/selfdriving/src
+workspace: /media/jetson/home/selfdriving

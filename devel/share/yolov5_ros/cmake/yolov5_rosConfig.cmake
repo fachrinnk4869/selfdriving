@@ -1,1 +1,1 @@
-/home/jetson/catkin_ws/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig.cmake
+/media/jetson/home/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig.cmake

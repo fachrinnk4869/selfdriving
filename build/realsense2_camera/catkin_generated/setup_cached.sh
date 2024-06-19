@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/jetson/catkin_ws/devel/.private/realsense2_camera:$CMAKE_PREFIX_PATH"
-export PWD='/home/jetson/catkin_ws/build/realsense2_camera'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/jetson/catkin_ws/devel/.private/realsense2_camera/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/jetson/catkin_ws/src/ros-realsense/realsense2_camera:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/media/jetson/home/selfdriving/devel/.private/realsense2_camera:$CMAKE_PREFIX_PATH"
+export PWD='/media/jetson/home/selfdriving/build/realsense2_camera'
+export ROSLISP_PACKAGE_DIRECTORIES="/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/media/jetson/home/selfdriving/src/ros-realsense/realsense2_camera:$ROS_PACKAGE_PATH"

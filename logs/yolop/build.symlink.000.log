@@ -1,0 +1,6 @@
+Symlinking /media/jetson/home/selfdriving/devel/share/yolop/cmake/yolopConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/yolop/cmake/yolopConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/yolop.pc
+Symlinking /media/jetson/home/selfdriving/devel/lib/yolop/lane_detection_node.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/yolop/cmake.lock
+Symlinking /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/yolop/__init__.py

@@ -67,14 +67,14 @@ set(ultralytics_ros_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(ultralytics_ros_SOURCE_PREFIX /home/jetson/catkin_ws/src/ultralytics_ros)
-  set(ultralytics_ros_DEVEL_PREFIX /home/jetson/catkin_ws/devel/.private/ultralytics_ros)
+  set(ultralytics_ros_SOURCE_PREFIX /media/jetson/home/selfdriving/src/ultralytics_ros)
+  set(ultralytics_ros_DEVEL_PREFIX /media/jetson/home/selfdriving/devel/.private/ultralytics_ros)
   set(ultralytics_ros_INSTALL_PREFIX "")
   set(ultralytics_ros_PREFIX ${ultralytics_ros_DEVEL_PREFIX})
 else()
   set(ultralytics_ros_SOURCE_PREFIX "")
   set(ultralytics_ros_DEVEL_PREFIX "")
-  set(ultralytics_ros_INSTALL_PREFIX /home/jetson/catkin_ws/install)
+  set(ultralytics_ros_INSTALL_PREFIX /media/jetson/home/selfdriving/install)
   set(ultralytics_ros_PREFIX ${ultralytics_ros_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/jetson/catkin_ws/install/lib;/home/jetson/catkin_ws/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /media/jetson/home/selfdriving/install/lib;/media/jetson/home/selfdriving/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

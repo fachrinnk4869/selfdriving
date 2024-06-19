@@ -1,1 +1,1 @@
-/home/jetson/catkin_ws/devel/.private/detection_msgs/lib/python3/dist-packages/detection_msgs/msg/__init__.py
+/media/jetson/home/selfdriving/devel/.private/detection_msgs/lib/python3/dist-packages/detection_msgs/msg/__init__.py

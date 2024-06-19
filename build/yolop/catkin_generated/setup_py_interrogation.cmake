@@ -1,0 +1,7 @@
+set(yolop_SETUP_PY_SETUP_MODULE "distutils.core")
+set(yolop_SETUP_PY_VERSION "0.0.0")
+set(yolop_SETUP_PY_SCRIPTS "")
+set(yolop_SETUP_PY_PACKAGES "yolop")
+set(yolop_SETUP_PY_PACKAGE_DIRS "src/yolop")
+set(yolop_SETUP_PY_MODULES "")
+set(yolop_SETUP_PY_MODULE_DIRS "")

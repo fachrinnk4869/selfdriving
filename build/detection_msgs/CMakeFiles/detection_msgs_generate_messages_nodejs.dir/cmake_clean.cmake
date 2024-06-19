@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/jetson/catkin_ws/devel/.private/detection_msgs/share/gennodejs/ros/detection_msgs/msg/BoundingBox.js"
-  "/home/jetson/catkin_ws/devel/.private/detection_msgs/share/gennodejs/ros/detection_msgs/msg/BoundingBoxes.js"
+  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/gennodejs/ros/detection_msgs/msg/BoundingBox.js"
+  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/gennodejs/ros/detection_msgs/msg/BoundingBoxes.js"
   "CMakeFiles/detection_msgs_generate_messages_nodejs"
 )
 

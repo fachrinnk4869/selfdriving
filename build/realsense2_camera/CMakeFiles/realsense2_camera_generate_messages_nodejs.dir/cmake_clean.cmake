@@ -1,8 +1,8 @@
 file(REMOVE_RECURSE
-  "/home/jetson/catkin_ws/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/msg/Extrinsics.js"
-  "/home/jetson/catkin_ws/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/msg/IMUInfo.js"
-  "/home/jetson/catkin_ws/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/msg/Metadata.js"
-  "/home/jetson/catkin_ws/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/srv/DeviceInfo.js"
+  "/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/msg/Extrinsics.js"
+  "/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/msg/IMUInfo.js"
+  "/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/msg/Metadata.js"
+  "/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/srv/DeviceInfo.js"
   "CMakeFiles/realsense2_camera_generate_messages_nodejs"
 )
 

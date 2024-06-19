@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/jetson/catkin_ws/devel/.private/realsense2_camera/setup.sh
+    local-name: /media/jetson/home/selfdriving/devel/.private/realsense2_camera/setup.sh

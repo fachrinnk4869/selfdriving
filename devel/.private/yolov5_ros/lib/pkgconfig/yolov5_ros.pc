@@ -1,4 +1,4 @@
-prefix=/home/jetson/catkin_ws/devel/.private/yolov5_ros
+prefix=/media/jetson/home/selfdriving/devel/.private/yolov5_ros
 
 Name: yolov5_ros
 Description: Description of yolov5_ros
