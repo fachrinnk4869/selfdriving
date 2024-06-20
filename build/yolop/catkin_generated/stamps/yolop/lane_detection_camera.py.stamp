@@ -199,7 +199,7 @@ def detect():
     # cv2.destroyALlWindows()
 
 if __name__ == '__main__':
-    rospy.init_node('lane_detection_node')
+    rospy.init_node('lane_detection_camera')
     path = roslib.packages.get_pkg_dir("yolop")
     # opt = rospy.get_param('~lane_detection_node_params')
     # print(opt)

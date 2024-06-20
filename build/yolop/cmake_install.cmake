@@ -152,7 +152,14 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
 endif()
 
 if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/yolop" TYPE PROGRAM FILES "/media/jetson/home/selfdriving/src/yolop/src/lane_detection_node.py")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/yolop" TYPE PROGRAM FILES "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/lane_detection_camera.py")
+endif()
+
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/yolop" TYPE PROGRAM FILES
+    "/media/jetson/home/selfdriving/src/yolop/src/lane_detection_node.py"
+    "/media/jetson/home/selfdriving/src/yolop/src/lane_detection_camera.py"
+    )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)

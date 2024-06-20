@@ -5,4 +5,5 @@ yolop
 /media/jetson/home/selfdriving/devel/.private/yolop/lib/pkgconfig/yolop.pc /media/jetson/home/selfdriving/devel/lib/pkgconfig/yolop.pc
 /media/jetson/home/selfdriving/devel/.private/yolop/lib/yolop/lane_detection_node.py /media/jetson/home/selfdriving/devel/lib/yolop/lane_detection_node.py
 /media/jetson/home/selfdriving/devel/.private/yolop/lib/yolop/cmake.lock /media/jetson/home/selfdriving/devel/lib/yolop/cmake.lock
+/media/jetson/home/selfdriving/devel/.private/yolop/lib/yolop/lane_detection_camera.py /media/jetson/home/selfdriving/devel/lib/yolop/lane_detection_camera.py
 /media/jetson/home/selfdriving/devel/.private/yolop/lib/python3/dist-packages/yolop/__init__.py /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/yolop/__init__.py
