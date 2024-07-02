@@ -23,6 +23,11 @@ sudo apt install ros-noetic-cv-camera
 rosrun cv_camera cv_camera_node _cv_cap_prop_frame_width:=640 _cv_cap_prop_frame_height:=480
 ```
 
+ros this code if use zed2i camera 
+```
+roslaunch zed_wrapper zed2i.launch
+```
+
 to see image from camera topic
 ```
 rosrun image_view image_view image:=/cv_camera/image_raw

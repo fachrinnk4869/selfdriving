@@ -1,0 +1,1 @@
+/media/jetson/home/selfdriving/devel/.private/zed_interfaces/share/roseus/ros/zed_interfaces/srv/stop_object_detection.l

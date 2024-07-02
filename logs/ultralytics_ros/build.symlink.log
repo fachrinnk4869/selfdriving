@@ -1,19 +1,19 @@
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/_index.js, /media/jetson/home/selfdriving/devel/share/gennodejs/ros/ultralytics_ros/_index.js)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js, /media/jetson/home/selfdriving/devel/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/_index.js, /media/jetson/home/selfdriving/devel/share/gennodejs/ros/ultralytics_ros/msg/_index.js)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/ultralytics_ros/cmake/ultralytics_rosConfig.cmake, /media/jetson/home/selfdriving/devel/share/ultralytics_ros/cmake/ultralytics_rosConfig.cmake)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/ultralytics_ros/cmake/ultralytics_ros-msg-extras.cmake, /media/jetson/home/selfdriving/devel/share/ultralytics_ros/cmake/ultralytics_ros-msg-extras.cmake)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/ultralytics_ros/cmake/ultralytics_ros-msg-paths.cmake, /media/jetson/home/selfdriving/devel/share/ultralytics_ros/cmake/ultralytics_ros-msg-paths.cmake)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/ultralytics_ros/cmake/ultralytics_rosConfig-version.cmake, /media/jetson/home/selfdriving/devel/share/ultralytics_ros/cmake/ultralytics_rosConfig-version.cmake)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/common-lisp/ros/ultralytics_ros/msg/_package_YoloResult.lisp, /media/jetson/home/selfdriving/devel/share/common-lisp/ros/ultralytics_ros/msg/_package_YoloResult.lisp)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/common-lisp/ros/ultralytics_ros/msg/YoloResult.lisp, /media/jetson/home/selfdriving/devel/share/common-lisp/ros/ultralytics_ros/msg/YoloResult.lisp)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/common-lisp/ros/ultralytics_ros/msg/ultralytics_ros-msg.asd, /media/jetson/home/selfdriving/devel/share/common-lisp/ros/ultralytics_ros/msg/ultralytics_ros-msg.asd)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/common-lisp/ros/ultralytics_ros/msg/_package.lisp, /media/jetson/home/selfdriving/devel/share/common-lisp/ros/ultralytics_ros/msg/_package.lisp)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/roseus/ros/ultralytics_ros/manifest.l, /media/jetson/home/selfdriving/devel/share/roseus/ros/ultralytics_ros/manifest.l)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/roseus/ros/ultralytics_ros/msg/YoloResult.l, /media/jetson/home/selfdriving/devel/share/roseus/ros/ultralytics_ros/msg/YoloResult.l)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/include/ultralytics_ros/YoloResult.h, /media/jetson/home/selfdriving/devel/include/ultralytics_ros/YoloResult.h)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/lib/pkgconfig/ultralytics_ros.pc, /media/jetson/home/selfdriving/devel/lib/pkgconfig/ultralytics_ros.pc)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/lib/ultralytics_ros/tracker_with_cloud_node, /media/jetson/home/selfdriving/devel/lib/ultralytics_ros/tracker_with_cloud_node)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/lib/python3/dist-packages/ultralytics_ros/__init__.py, /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/ultralytics_ros/__init__.py)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/lib/python3/dist-packages/ultralytics_ros/msg/_YoloResult.py, /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/ultralytics_ros/msg/_YoloResult.py)
-Linked: (/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/lib/python3/dist-packages/ultralytics_ros/msg/__init__.py, /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/ultralytics_ros/msg/__init__.py)
+Symlinking /media/jetson/home/selfdriving/devel/share/gennodejs/ros/ultralytics_ros/_index.js
+Symlinking /media/jetson/home/selfdriving/devel/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js
+Symlinking /media/jetson/home/selfdriving/devel/share/gennodejs/ros/ultralytics_ros/msg/_index.js
+Symlinking /media/jetson/home/selfdriving/devel/share/ultralytics_ros/cmake/ultralytics_rosConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/ultralytics_ros/cmake/ultralytics_ros-msg-extras.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/ultralytics_ros/cmake/ultralytics_ros-msg-paths.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/ultralytics_ros/cmake/ultralytics_rosConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/common-lisp/ros/ultralytics_ros/msg/_package_YoloResult.lisp
+Symlinking /media/jetson/home/selfdriving/devel/share/common-lisp/ros/ultralytics_ros/msg/YoloResult.lisp
+Symlinking /media/jetson/home/selfdriving/devel/share/common-lisp/ros/ultralytics_ros/msg/ultralytics_ros-msg.asd
+Symlinking /media/jetson/home/selfdriving/devel/share/common-lisp/ros/ultralytics_ros/msg/_package.lisp
+Symlinking /media/jetson/home/selfdriving/devel/share/roseus/ros/ultralytics_ros/manifest.l
+Symlinking /media/jetson/home/selfdriving/devel/share/roseus/ros/ultralytics_ros/msg/YoloResult.l
+Symlinking /media/jetson/home/selfdriving/devel/include/ultralytics_ros/YoloResult.h
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/ultralytics_ros.pc
+Symlinking /media/jetson/home/selfdriving/devel/lib/ultralytics_ros/tracker_with_cloud_node
+Symlinking /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/ultralytics_ros/__init__.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/ultralytics_ros/msg/_YoloResult.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/ultralytics_ros/msg/__init__.py

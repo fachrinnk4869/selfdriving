@@ -1,0 +1,8 @@
+prefix=/media/jetson/home/selfdriving/install
+
+Name: angle_publisher
+Description: Description of angle_publisher
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: rospy std_msgs

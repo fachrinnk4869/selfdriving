@@ -1,0 +1,3 @@
+Symlinking /media/jetson/home/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/dummy_curvature.pc

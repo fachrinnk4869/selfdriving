@@ -1,7 +1,0 @@
-Linked: (/media/jetson/home/selfdriving/devel/.private/yolop/share/yolop/cmake/yolopConfig-version.cmake, /media/jetson/home/selfdriving/devel/share/yolop/cmake/yolopConfig-version.cmake)
-Linked: (/media/jetson/home/selfdriving/devel/.private/yolop/share/yolop/cmake/yolopConfig.cmake, /media/jetson/home/selfdriving/devel/share/yolop/cmake/yolopConfig.cmake)
-Linked: (/media/jetson/home/selfdriving/devel/.private/yolop/lib/pkgconfig/yolop.pc, /media/jetson/home/selfdriving/devel/lib/pkgconfig/yolop.pc)
-Linked: (/media/jetson/home/selfdriving/devel/.private/yolop/lib/yolop/lane_detection_node.py, /media/jetson/home/selfdriving/devel/lib/yolop/lane_detection_node.py)
-Linked: (/media/jetson/home/selfdriving/devel/.private/yolop/lib/yolop/cmake.lock, /media/jetson/home/selfdriving/devel/lib/yolop/cmake.lock)
-Symlinking /media/jetson/home/selfdriving/devel/lib/yolop/lane_detection_camera.py
-Linked: (/media/jetson/home/selfdriving/devel/.private/yolop/lib/python3/dist-packages/yolop/__init__.py, /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/yolop/__init__.py)

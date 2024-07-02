@@ -33,6 +33,7 @@ Not searching for unused variables given on the command line.
 [36m--[0m catkin 0.8.10
 [36m--[0m BUILD_SHARED_LIBS is on
 [36m--[0m Installing devel-space wrapper /media/jetson/home/selfdriving/src/yolop/src/lane_detection_node.py to /media/jetson/home/selfdriving/devel/.private/yolop/lib/yolop
+[36m--[0m Installing devel-space wrapper /media/jetson/home/selfdriving/src/yolop/src/lane_detection_camera.py to /media/jetson/home/selfdriving/devel/.private/yolop/lib/yolop
 [36m--[0m Configuring done
 [36m--[0m Generating done
 [36m--[0m Build files have been written to: /media/jetson/home/selfdriving/build/yolop

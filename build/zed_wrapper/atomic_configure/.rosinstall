@@ -1,0 +1,2 @@
+- setup-file:
+    local-name: /media/jetson/home/selfdriving/devel/.private/zed_wrapper/setup.sh

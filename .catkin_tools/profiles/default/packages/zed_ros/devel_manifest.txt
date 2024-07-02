@@ -1,0 +1,2 @@
+zed-ros-wrapper/zed_ros
+/media/jetson/home/selfdriving/devel/.private/zed_ros/cmake.lock /media/jetson/home/selfdriving/devel/./cmake.lock
