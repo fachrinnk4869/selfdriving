@@ -1,0 +1,8 @@
+prefix=/media/jetson/home/selfdriving/install
+
+Name: polylannet
+Description: Description of polylannet
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

@@ -58,17 +58,17 @@ CMakeFiles/ultralytics_ros_generate_messages_nodejs: /media/jetson/home/selfdriv
 
 /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/lib/gennodejs/gen_nodejs.py
 /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /media/jetson/home/selfdriving/src/ultralytics_ros/msg/YoloResult.msg
+/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/vision_msgs/msg/Detection2DArray.msg
+/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovariance.msg
+/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/vision_msgs/msg/BoundingBox2D.msg
 /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/std_msgs/msg/Header.msg
 /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/geometry_msgs/msg/Point.msg
 /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/vision_msgs/msg/ObjectHypothesisWithPose.msg
-/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/vision_msgs/msg/Detection2D.msg
-/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
 /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose.msg
+/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/sensor_msgs/msg/Image.msg
 /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/geometry_msgs/msg/Pose2D.msg
-/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/vision_msgs/msg/Detection2DArray.msg
 /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/geometry_msgs/msg/Quaternion.msg
-/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/geometry_msgs/msg/PoseWithCovariance.msg
-/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/vision_msgs/msg/BoundingBox2D.msg
+/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js: /opt/ros/noetic/share/vision_msgs/msg/Detection2D.msg
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/media/jetson/home/selfdriving/build/ultralytics_ros/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating Javascript code from ultralytics_ros/YoloResult.msg"
 	catkin_generated/env_cached.sh /usr/bin/python3 /opt/ros/noetic/share/gennodejs/cmake/../../../lib/gennodejs/gen_nodejs.py /media/jetson/home/selfdriving/src/ultralytics_ros/msg/YoloResult.msg -Iultralytics_ros:/media/jetson/home/selfdriving/src/ultralytics_ros/msg -Isensor_msgs:/opt/ros/noetic/share/sensor_msgs/cmake/../msg -Istd_msgs:/opt/ros/noetic/share/std_msgs/cmake/../msg -Ivision_msgs:/opt/ros/noetic/share/vision_msgs/cmake/../msg -Igeometry_msgs:/opt/ros/noetic/share/geometry_msgs/cmake/../msg -p ultralytics_ros -o /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg
 

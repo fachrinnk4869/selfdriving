@@ -1,21 +1,21 @@
 Performing C SOURCE FILE Test CMAKE_HAVE_LIBC_PTHREAD failed with the following output:
 Change Dir: /media/jetson/home/selfdriving/build/detection_msgs/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_21773/fast && /usr/bin/make -f CMakeFiles/cmTC_21773.dir/build.make CMakeFiles/cmTC_21773.dir/build
+Run Build Command(s):/usr/bin/make cmTC_c782a/fast && /usr/bin/make -f CMakeFiles/cmTC_c782a.dir/build.make CMakeFiles/cmTC_c782a.dir/build
 make[1]: Entering directory '/media/jetson/home/selfdriving/build/detection_msgs/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_21773.dir/src.c.o
-/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_21773.dir/src.c.o   -c /media/jetson/home/selfdriving/build/detection_msgs/CMakeFiles/CMakeTmp/src.c
-Linking C executable cmTC_21773
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_21773.dir/link.txt --verbose=1
-/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_21773.dir/src.c.o  -o cmTC_21773 
-/usr/bin/ld: CMakeFiles/cmTC_21773.dir/src.c.o: in function `main':
+Building C object CMakeFiles/cmTC_c782a.dir/src.c.o
+/usr/bin/cc   -DCMAKE_HAVE_LIBC_PTHREAD   -o CMakeFiles/cmTC_c782a.dir/src.c.o   -c /media/jetson/home/selfdriving/build/detection_msgs/CMakeFiles/CMakeTmp/src.c
+Linking C executable cmTC_c782a
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_c782a.dir/link.txt --verbose=1
+/usr/bin/cc  -DCMAKE_HAVE_LIBC_PTHREAD    -rdynamic CMakeFiles/cmTC_c782a.dir/src.c.o  -o cmTC_c782a 
+/usr/bin/ld: CMakeFiles/cmTC_c782a.dir/src.c.o: in function `main':
 src.c:(.text+0x48): undefined reference to `pthread_create'
 /usr/bin/ld: src.c:(.text+0x50): undefined reference to `pthread_detach'
 /usr/bin/ld: src.c:(.text+0x5c): undefined reference to `pthread_join'
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_21773.dir/build.make:87: cmTC_21773] Error 1
+make[1]: *** [CMakeFiles/cmTC_c782a.dir/build.make:87: cmTC_c782a] Error 1
 make[1]: Leaving directory '/media/jetson/home/selfdriving/build/detection_msgs/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_21773/fast] Error 2
+make: *** [Makefile:121: cmTC_c782a/fast] Error 2
 
 
 Source file was:
@@ -41,18 +41,18 @@ int main(void)
 Determining if the function pthread_create exists in the pthreads failed with the following output:
 Change Dir: /media/jetson/home/selfdriving/build/detection_msgs/CMakeFiles/CMakeTmp
 
-Run Build Command(s):/usr/bin/make cmTC_63ea8/fast && /usr/bin/make -f CMakeFiles/cmTC_63ea8.dir/build.make CMakeFiles/cmTC_63ea8.dir/build
+Run Build Command(s):/usr/bin/make cmTC_53fbe/fast && /usr/bin/make -f CMakeFiles/cmTC_53fbe.dir/build.make CMakeFiles/cmTC_53fbe.dir/build
 make[1]: Entering directory '/media/jetson/home/selfdriving/build/detection_msgs/CMakeFiles/CMakeTmp'
-Building C object CMakeFiles/cmTC_63ea8.dir/CheckFunctionExists.c.o
-/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_63ea8.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
-Linking C executable cmTC_63ea8
-/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_63ea8.dir/link.txt --verbose=1
-/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_63ea8.dir/CheckFunctionExists.c.o  -o cmTC_63ea8  -lpthreads 
+Building C object CMakeFiles/cmTC_53fbe.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_53fbe.dir/CheckFunctionExists.c.o   -c /usr/share/cmake-3.16/Modules/CheckFunctionExists.c
+Linking C executable cmTC_53fbe
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTC_53fbe.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    -rdynamic CMakeFiles/cmTC_53fbe.dir/CheckFunctionExists.c.o  -o cmTC_53fbe  -lpthreads 
 /usr/bin/ld: cannot find -lpthreads
 collect2: error: ld returned 1 exit status
-make[1]: *** [CMakeFiles/cmTC_63ea8.dir/build.make:87: cmTC_63ea8] Error 1
+make[1]: *** [CMakeFiles/cmTC_53fbe.dir/build.make:87: cmTC_53fbe] Error 1
 make[1]: Leaving directory '/media/jetson/home/selfdriving/build/detection_msgs/CMakeFiles/CMakeTmp'
-make: *** [Makefile:121: cmTC_63ea8/fast] Error 2
+make: *** [Makefile:121: cmTC_53fbe/fast] Error 2
 
 
 

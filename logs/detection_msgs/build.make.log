@@ -5,7 +5,7 @@
 [  0%] Built target std_msgs_generate_messages_eus
 [  0%] Built target std_msgs_generate_messages_cpp
 [  0%] Built target std_msgs_generate_messages_py
-[ 25%] Built target detection_msgs_generate_messages_lisp
+[ 16%] Built target detection_msgs_generate_messages_lisp
 [ 33%] Built target detection_msgs_generate_messages_nodejs
 [ 58%] Built target detection_msgs_generate_messages_eus
 [ 75%] Built target detection_msgs_generate_messages_cpp

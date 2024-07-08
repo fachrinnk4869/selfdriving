@@ -9,5 +9,6 @@
 # modified environment variables
 export CMAKE_PREFIX_PATH="/media/jetson/home/selfdriving/devel/.private/ultralytics_ros:$CMAKE_PREFIX_PATH"
 export PWD='/media/jetson/home/selfdriving/build/ultralytics_ros'
+export PYTHONPATH="/media/jetson/home/selfdriving/devel/lib/python3/dist-packages:$PYTHONPATH"
 export ROSLISP_PACKAGE_DIRECTORIES="/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
 export ROS_PACKAGE_PATH="/media/jetson/home/selfdriving/src/ultralytics_ros:$ROS_PACKAGE_PATH"

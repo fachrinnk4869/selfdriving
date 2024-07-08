@@ -1,0 +1,5 @@
+Symlinking /media/jetson/home/selfdriving/devel/share/gps/cmake/gpsConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/gps/cmake/gpsConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/gps.pc
+Symlinking /media/jetson/home/selfdriving/devel/lib/gps/cmake.lock
+Symlinking /media/jetson/home/selfdriving/devel/lib/gps/tcp_mevi.py
