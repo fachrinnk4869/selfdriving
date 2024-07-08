@@ -1,0 +1,12 @@
+lxml
+xmljson
+scipy
+tabulate
+numpy
+ujson
+matplotlib
+imgaug
+tqdm
+progressbar
+PyYAML
+scikit-learn

@@ -1,0 +1,8 @@
+prefix=/media/jetson/home/selfdriving/install
+
+Name: hasil
+Description: Description of hasil
+Version: 0.0.0
+Cflags: 
+Libs: -L${prefix}/lib 
+Requires: 

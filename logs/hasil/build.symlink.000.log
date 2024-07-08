@@ -1,0 +1,5 @@
+Symlinking /media/jetson/home/selfdriving/devel/share/hasil/cmake/hasilConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/hasil/cmake/hasilConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/lib/hasil/fps.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/hasil/cmake.lock
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/hasil.pc

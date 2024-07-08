@@ -1,0 +1,9 @@
+<launch>
+    <!-- Argument to specify CSV filename -->
+    <arg name="csv_filename_arg" default="fps_data.csv" />
+    
+    <!-- Node to log FPS data -->
+    <node name="fps_logger" pkg="hasil" type="fps.py" output="screen">
+        <param name="csv_filename" type="str" value="$(arg csv_filename_arg)" />
+    </node>
+</launch>

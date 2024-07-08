@@ -49,12 +49,12 @@ add_custom_target(_zed_interfaces_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg" NAME_WE)
 add_custom_target(_zed_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_interfaces" "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg" "zed_interfaces/Keypoint2Di:zed_interfaces/Keypoint3D:zed_interfaces/Keypoint2Df:zed_interfaces/Skeleton3D:zed_interfaces/BoundingBox2Di:zed_interfaces/Skeleton2D:zed_interfaces/BoundingBox3D:zed_interfaces/BoundingBox2Df"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_interfaces" "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg" "zed_interfaces/Skeleton2D:zed_interfaces/Skeleton3D:zed_interfaces/BoundingBox3D:zed_interfaces/BoundingBox2Di:zed_interfaces/Keypoint2Di:zed_interfaces/Keypoint2Df:zed_interfaces/Keypoint3D:zed_interfaces/BoundingBox2Df"
 )
 
 get_filename_component(_filename "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/ObjectsStamped.msg" NAME_WE)
 add_custom_target(_zed_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_interfaces" "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/ObjectsStamped.msg" "zed_interfaces/Keypoint2Di:zed_interfaces/Keypoint3D:zed_interfaces/Keypoint2Df:zed_interfaces/Skeleton3D:zed_interfaces/BoundingBox2Di:zed_interfaces/Skeleton2D:zed_interfaces/BoundingBox3D:zed_interfaces/BoundingBox2Df:std_msgs/Header:zed_interfaces/Object"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_interfaces" "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/ObjectsStamped.msg" "zed_interfaces/Skeleton2D:zed_interfaces/Skeleton3D:zed_interfaces/BoundingBox3D:zed_interfaces/Object:zed_interfaces/BoundingBox2Di:zed_interfaces/Keypoint2Di:zed_interfaces/Keypoint2Df:std_msgs/Header:zed_interfaces/Keypoint3D:zed_interfaces/BoundingBox2Df"
 )
 
 get_filename_component(_filename "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg" NAME_WE)
@@ -69,12 +69,12 @@ add_custom_target(_zed_interfaces_generate_messages_check_deps_${_filename}
 
 get_filename_component(_filename "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/RGBDSensors.msg" NAME_WE)
 add_custom_target(_zed_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_interfaces" "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/RGBDSensors.msg" "geometry_msgs/Quaternion:sensor_msgs/MagneticField:sensor_msgs/CameraInfo:std_msgs/Header:sensor_msgs/Imu:geometry_msgs/Vector3:sensor_msgs/Image:sensor_msgs/RegionOfInterest"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_interfaces" "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/RGBDSensors.msg" "sensor_msgs/MagneticField:geometry_msgs/Vector3:sensor_msgs/CameraInfo:sensor_msgs/Imu:sensor_msgs/RegionOfInterest:std_msgs/Header:sensor_msgs/Image:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/PlaneStamped.msg" NAME_WE)
 add_custom_target(_zed_interfaces_generate_messages_check_deps_${_filename}
-  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_interfaces" "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/PlaneStamped.msg" "shape_msgs/MeshTriangle:geometry_msgs/Quaternion:shape_msgs/Mesh:shape_msgs/Plane:geometry_msgs/Point32:std_msgs/Header:geometry_msgs/Point:geometry_msgs/Polygon:geometry_msgs/Vector3:geometry_msgs/Transform"
+  COMMAND ${CATKIN_ENV} ${PYTHON_EXECUTABLE} ${GENMSG_CHECK_DEPS_SCRIPT} "zed_interfaces" "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/PlaneStamped.msg" "geometry_msgs/Polygon:geometry_msgs/Vector3:shape_msgs/MeshTriangle:shape_msgs/Mesh:geometry_msgs/Transform:geometry_msgs/Point32:geometry_msgs/Point:shape_msgs/Plane:std_msgs/Header:geometry_msgs/Quaternion"
 )
 
 get_filename_component(_filename "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/PosTrackStatus.msg" NAME_WE)
@@ -212,13 +212,13 @@ _generate_msg_cpp(zed_interfaces
 _generate_msg_cpp(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_cpp(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/ObjectsStamped.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_cpp(zed_interfaces
@@ -236,13 +236,13 @@ _generate_msg_cpp(zed_interfaces
 _generate_msg_cpp(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/RGBDSensors.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_cpp(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/PlaneStamped.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gencpp_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_cpp(zed_interfaces
@@ -477,13 +477,13 @@ _generate_msg_eus(zed_interfaces
 _generate_msg_eus(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_eus(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/ObjectsStamped.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_eus(zed_interfaces
@@ -501,13 +501,13 @@ _generate_msg_eus(zed_interfaces
 _generate_msg_eus(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/RGBDSensors.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_eus(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/PlaneStamped.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${geneus_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_eus(zed_interfaces
@@ -742,13 +742,13 @@ _generate_msg_lisp(zed_interfaces
 _generate_msg_lisp(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_lisp(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/ObjectsStamped.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_lisp(zed_interfaces
@@ -766,13 +766,13 @@ _generate_msg_lisp(zed_interfaces
 _generate_msg_lisp(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/RGBDSensors.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_lisp(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/PlaneStamped.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genlisp_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_lisp(zed_interfaces
@@ -1007,13 +1007,13 @@ _generate_msg_nodejs(zed_interfaces
 _generate_msg_nodejs(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_nodejs(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/ObjectsStamped.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_nodejs(zed_interfaces
@@ -1031,13 +1031,13 @@ _generate_msg_nodejs(zed_interfaces
 _generate_msg_nodejs(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/RGBDSensors.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_nodejs(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/PlaneStamped.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${gennodejs_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_nodejs(zed_interfaces
@@ -1272,13 +1272,13 @@ _generate_msg_py(zed_interfaces
 _generate_msg_py(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_py(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/ObjectsStamped.msg"
   "${MSG_I_FLAGS}"
-  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg"
+  "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton2D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Skeleton3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Object.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Di.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint2Df.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/Keypoint3D.msg;/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/BoundingBox2Df.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_py(zed_interfaces
@@ -1296,13 +1296,13 @@ _generate_msg_py(zed_interfaces
 _generate_msg_py(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/RGBDSensors.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg"
+  "/opt/ros/noetic/share/sensor_msgs/cmake/../msg/MagneticField.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/CameraInfo.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Imu.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/RegionOfInterest.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/sensor_msgs/cmake/../msg/Image.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_py(zed_interfaces
   "/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces/msg/PlaneStamped.msg"
   "${MSG_I_FLAGS}"
-  "/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg"
+  "/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Polygon.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Vector3.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/MeshTriangle.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Mesh.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Transform.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point32.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Point.msg;/opt/ros/noetic/share/shape_msgs/cmake/../msg/Plane.msg;/opt/ros/noetic/share/std_msgs/cmake/../msg/Header.msg;/opt/ros/noetic/share/geometry_msgs/cmake/../msg/Quaternion.msg"
   ${CATKIN_DEVEL_PREFIX}/${genpy_INSTALL_DIR}/zed_interfaces
 )
 _generate_msg_py(zed_interfaces

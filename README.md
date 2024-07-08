@@ -52,3 +52,7 @@ ros launch lane detection yolopv2 camera
 ```
 roslaunch yolop lane_camera.launch
 ```
+print hasil fps to csv
+```
+roslaunch hasil hasil_fps.launch csv_filename_arg:=fps_yolop1.csv
+```

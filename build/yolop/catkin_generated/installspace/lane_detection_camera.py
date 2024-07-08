@@ -256,11 +256,11 @@ if __name__ == '__main__':
     path = roslib.packages.get_pkg_dir("yolop")
     
     # Subscribe to the camera topic
-    rospy.Subscriber("/cv_camera/image_raw", Image, image_callback)
+    rospy.Subscriber("/zed2i/zed_node/rgb/image_rect_color", Image, image_callback)
     
     with torch.no_grad():
         # Initial call to detect in case of using image files
-        if not rospy.has_param('/cv_camera/image_raw'):
+        if not rospy.has_param('/zed2i/zed_node/rgb/image_rect_color'):
             detect()
     
     rospy.spin()

@@ -47,6 +47,7 @@ def detect():
     
 
     left_curve_pub = rospy.Publisher('left_lane_curve', Float32, queue_size=10)
+    fps_pub = rospy.Publisher('fps', Float32, queue_size=10)
     right_curve_pub = rospy.Publisher('right_lane_curve', Float32, queue_size=10)
     save_dir = Path(increment_path(Path(project) / name, exist_ok=exist_ok))  # increment run
     (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
@@ -152,7 +153,7 @@ def detect():
                 right_curve_pub.publish(right_curve)
             except NameError:
                 rospy.logwarn("Right curve not calculated.")
-                
+            fps_pub.publish(fps)
             cv2.putText(
                 output_image,
                 text=f"YOLOPv2 FPS: {fps:.1f}",
