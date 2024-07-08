@@ -1,8 +1,8 @@
-# Install script for directory: /media/jetson/home/selfdriving/src/ultralytics_ros
+# Install script for directory: /home/fachri/selfdriving/src/ultralytics_ros
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/media/jetson/home/selfdriving/install")
+  set(CMAKE_INSTALL_PREFIX "/home/fachri/selfdriving/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,7 +37,12 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+# Set default install directory permissions.
+if(NOT DEFINED CMAKE_OBJDUMP)
+  set(CMAKE_OBJDUMP "/usr/bin/objdump")
+endif()
+
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   
       if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
         file(MAKE_DIRECTORY "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
@@ -47,155 +52,155 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
       endif()
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/media/jetson/home/selfdriving/install/_setup_util.py")
+   "/home/fachri/selfdriving/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE PROGRAM FILES "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/_setup_util.py")
+  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE PROGRAM FILES "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/_setup_util.py")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/media/jetson/home/selfdriving/install/env.sh")
+   "/home/fachri/selfdriving/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE PROGRAM FILES "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/env.sh")
+  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE PROGRAM FILES "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/env.sh")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/media/jetson/home/selfdriving/install/setup.bash;/media/jetson/home/selfdriving/install/local_setup.bash")
+   "/home/fachri/selfdriving/install/setup.bash;/home/fachri/selfdriving/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE FILE FILES
-    "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/setup.bash"
-    "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/local_setup.bash"
+  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE FILE FILES
+    "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/setup.bash"
+    "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/media/jetson/home/selfdriving/install/setup.sh;/media/jetson/home/selfdriving/install/local_setup.sh")
+   "/home/fachri/selfdriving/install/setup.sh;/home/fachri/selfdriving/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE FILE FILES
-    "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/setup.sh"
-    "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/local_setup.sh"
+  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE FILE FILES
+    "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/setup.sh"
+    "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/media/jetson/home/selfdriving/install/setup.zsh;/media/jetson/home/selfdriving/install/local_setup.zsh")
+   "/home/fachri/selfdriving/install/setup.zsh;/home/fachri/selfdriving/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE FILE FILES
-    "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/setup.zsh"
-    "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/local_setup.zsh"
+  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE FILE FILES
+    "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/setup.zsh"
+    "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/media/jetson/home/selfdriving/install/.rosinstall")
+   "/home/fachri/selfdriving/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE FILE FILES "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/.rosinstall")
+  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE FILE FILES "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/.rosinstall")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ultralytics_ros/msg" TYPE FILE FILES "/media/jetson/home/selfdriving/src/ultralytics_ros/msg/YoloResult.msg")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ultralytics_ros/msg" TYPE FILE FILES "/home/fachri/selfdriving/src/ultralytics_ros/msg/YoloResult.msg")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ultralytics_ros/cmake" TYPE FILE FILES "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_ros-msg-paths.cmake")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ultralytics_ros/cmake" TYPE FILE FILES "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_ros-msg-paths.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/include/ultralytics_ros")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include" TYPE DIRECTORY FILES "/home/fachri/selfdriving/devel/.private/ultralytics_ros/include/ultralytics_ros")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/roseus/ros/ultralytics_ros")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/roseus/ros" TYPE DIRECTORY FILES "/home/fachri/selfdriving/devel/.private/ultralytics_ros/share/roseus/ros/ultralytics_ros")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/common-lisp/ros/ultralytics_ros")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/common-lisp/ros" TYPE DIRECTORY FILES "/home/fachri/selfdriving/devel/.private/ultralytics_ros/share/common-lisp/ros/ultralytics_ros")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/gennodejs/ros" TYPE DIRECTORY FILES "/home/fachri/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  execute_process(COMMAND "/usr/bin/python3" -m compileall "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/lib/python3/dist-packages/ultralytics_ros")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  execute_process(COMMAND "/usr/bin/python3" -m compileall "/home/fachri/selfdriving/devel/.private/ultralytics_ros/lib/python3/dist-packages/ultralytics_ros")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/lib/python3/dist-packages/ultralytics_ros")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/python3/dist-packages" TYPE DIRECTORY FILES "/home/fachri/selfdriving/devel/.private/ultralytics_ros/lib/python3/dist-packages/ultralytics_ros")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_ros.pc")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_ros.pc")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ultralytics_ros/cmake" TYPE FILE FILES "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_ros-msg-extras.cmake")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ultralytics_ros/cmake" TYPE FILE FILES "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_ros-msg-extras.cmake")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ultralytics_ros/cmake" TYPE FILE FILES
-    "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_rosConfig.cmake"
-    "/media/jetson/home/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_rosConfig-version.cmake"
+    "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_rosConfig.cmake"
+    "/home/fachri/selfdriving/build/ultralytics_ros/catkin_generated/installspace/ultralytics_rosConfig-version.cmake"
     )
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ultralytics_ros" TYPE FILE FILES "/media/jetson/home/selfdriving/src/ultralytics_ros/package.xml")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/ultralytics_ros" TYPE FILE FILES "/home/fachri/selfdriving/src/ultralytics_ros/package.xml")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros" TYPE PROGRAM FILES "/media/jetson/home/selfdriving/src/ultralytics_ros/script/tracker_node.py")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros" TYPE PROGRAM FILES "/home/fachri/selfdriving/src/ultralytics_ros/script/tracker_node.py")
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros/tracker_with_cloud_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros/tracker_with_cloud_node")
     file(RPATH_CHECK
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros/tracker_with_cloud_node"
          RPATH "")
   endif()
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros" TYPE EXECUTABLE FILES "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/lib/ultralytics_ros/tracker_with_cloud_node")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros" TYPE EXECUTABLE FILES "/home/fachri/selfdriving/devel/.private/ultralytics_ros/lib/ultralytics_ros/tracker_with_cloud_node")
   if(EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros/tracker_with_cloud_node" AND
      NOT IS_SYMLINK "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros/tracker_with_cloud_node")
     file(RPATH_CHANGE
          FILE "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros/tracker_with_cloud_node"
-         OLD_RPATH "/usr/local/cuda/lib64:/opt/ros/noetic/lib:/usr/local/lib:"
+         OLD_RPATH "/opt/ros/noetic/lib:"
          NEW_RPATH "")
     if(CMAKE_INSTALL_DO_STRIP)
       execute_process(COMMAND "/usr/bin/strip" "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}/lib/ultralytics_ros/tracker_with_cloud_node")
@@ -203,13 +208,13 @@ if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_
   endif()
 endif()
 
-if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ultralytics_ros" TYPE DIRECTORY FILES "/media/jetson/home/selfdriving/src/ultralytics_ros/include")
+if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/include/ultralytics_ros" TYPE DIRECTORY FILES "/home/fachri/selfdriving/src/ultralytics_ros/include")
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/media/jetson/home/selfdriving/build/ultralytics_ros/gtest/cmake_install.cmake")
+  include("/home/fachri/selfdriving/build/ultralytics_ros/gtest/cmake_install.cmake")
 
 endif()
 
@@ -221,5 +226,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/media/jetson/home/selfdriving/build/ultralytics_ros/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/fachri/selfdriving/build/ultralytics_ros/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

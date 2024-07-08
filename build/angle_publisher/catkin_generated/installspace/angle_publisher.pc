@@ -1,4 +1,4 @@
-prefix=/media/jetson/home/selfdriving/install
+prefix=/home/fachri/selfdriving/install
 
 Name: angle_publisher
 Description: Description of angle_publisher

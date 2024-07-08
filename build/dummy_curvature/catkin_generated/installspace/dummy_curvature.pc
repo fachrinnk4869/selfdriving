@@ -1,4 +1,4 @@
-prefix=/media/jetson/home/selfdriving/install
+prefix=/home/fachri/selfdriving/install
 
 Name: dummy_curvature
 Description: Description of dummy_curvature

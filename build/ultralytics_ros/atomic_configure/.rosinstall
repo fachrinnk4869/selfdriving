@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /media/jetson/home/selfdriving/devel/.private/ultralytics_ros/setup.sh
+    local-name: /home/fachri/selfdriving/devel/.private/ultralytics_ros/setup.sh

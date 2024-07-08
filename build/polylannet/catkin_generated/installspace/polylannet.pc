@@ -1,4 +1,4 @@
-prefix=/media/jetson/home/selfdriving/install
+prefix=/home/fachri/selfdriving/install
 
 Name: polylannet
 Description: Description of polylannet

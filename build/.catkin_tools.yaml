@@ -1,6 +1,6 @@
-devel_space: /media/jetson/home/selfdriving/devel
+devel_space: /home/fachri/selfdriving/devel
 install: false
-install_space: /media/jetson/home/selfdriving/install
+install_space: /home/fachri/selfdriving/install
 profile: default
-source_space: /media/jetson/home/selfdriving/src
-workspace: /media/jetson/home/selfdriving
+source_space: /home/fachri/selfdriving/src
+workspace: /home/fachri/selfdriving

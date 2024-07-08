@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/zed_interfaces/share/roseus/ros/zed_interfaces/msg/Skeleton2D.l
+/home/fachri/selfdriving/devel/.private/zed_interfaces/share/roseus/ros/zed_interfaces/msg/Skeleton2D.l

@@ -1,6 +1,7 @@
-Symlinking /media/jetson/home/selfdriving/devel/share/polylannet/cmake/polylannetConfig-version.cmake
-Symlinking /media/jetson/home/selfdriving/devel/share/polylannet/cmake/polylannetConfig.cmake
-Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/polylannet.pc
-Symlinking /media/jetson/home/selfdriving/devel/lib/polylannet/infer.py
-Symlinking /media/jetson/home/selfdriving/devel/lib/polylannet/test.py
-Symlinking /media/jetson/home/selfdriving/devel/lib/polylannet/cmake.lock
+Symlinking /home/fachri/selfdriving/devel/share/polylannet/cmake/polylannetConfig.cmake
+Symlinking /home/fachri/selfdriving/devel/share/polylannet/cmake/polylannetConfig-version.cmake
+Symlinking /home/fachri/selfdriving/devel/lib/python3/dist-packages/polylannet/__init__.py
+Symlinking /home/fachri/selfdriving/devel/lib/pkgconfig/polylannet.pc
+Symlinking /home/fachri/selfdriving/devel/lib/polylannet/cmake.lock
+Symlinking /home/fachri/selfdriving/devel/lib/polylannet/infer.py
+Symlinking /home/fachri/selfdriving/devel/lib/polylannet/test.py

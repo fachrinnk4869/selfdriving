@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig.cmake
+/home/fachri/selfdriving/devel/.private/zed_interfaces/share/zed_interfaces/cmake/zed_interfacesConfig.cmake

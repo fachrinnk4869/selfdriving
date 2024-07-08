@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/roseus/ros/realsense2_camera/manifest.l
+/home/fachri/selfdriving/devel/.private/realsense2_camera/share/roseus/ros/realsense2_camera/manifest.l

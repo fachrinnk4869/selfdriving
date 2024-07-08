@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/gennodejs/ros/detection_msgs/_index.js
+/home/fachri/selfdriving/devel/.private/detection_msgs/share/gennodejs/ros/detection_msgs/_index.js

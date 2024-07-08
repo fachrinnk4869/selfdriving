@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/angle_publisher/share/angle_publisher/cmake/angle_publisherConfig-version.cmake
+/home/fachri/selfdriving/devel/.private/angle_publisher/share/angle_publisher/cmake/angle_publisherConfig-version.cmake

@@ -56,3 +56,7 @@ print hasil fps to csv
 ```
 roslaunch hasil hasil_fps.launch csv_filename_arg:=fps_yolop1.csv
 ```
+run polylannet
+```
+rosrun polylannet infer.py
+```

@@ -1,5 +1,5 @@
-Symlinking /media/jetson/home/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake
-Symlinking /media/jetson/home/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig.cmake
-Symlinking /media/jetson/home/selfdriving/devel/lib/yolov5_ros/detect.py
-Symlinking /media/jetson/home/selfdriving/devel/lib/yolov5_ros/cmake.lock
-Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/yolov5_ros.pc
+Symlinking /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake
+Symlinking /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig.cmake
+Symlinking /home/fachri/selfdriving/devel/lib/pkgconfig/yolov5_ros.pc
+Symlinking /home/fachri/selfdriving/devel/lib/yolov5_ros/cmake.lock
+Symlinking /home/fachri/selfdriving/devel/lib/yolov5_ros/detect.py

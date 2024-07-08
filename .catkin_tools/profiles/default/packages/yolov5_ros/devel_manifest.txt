@@ -1,7 +1,7 @@
 yolov5_ros
-/media/jetson/home/selfdriving/devel/.private/yolov5_ros/cmake.lock /media/jetson/home/selfdriving/devel/./cmake.lock
-/media/jetson/home/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake /media/jetson/home/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake
-/media/jetson/home/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig.cmake /media/jetson/home/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig.cmake
-/media/jetson/home/selfdriving/devel/.private/yolov5_ros/lib/yolov5_ros/detect.py /media/jetson/home/selfdriving/devel/lib/yolov5_ros/detect.py
-/media/jetson/home/selfdriving/devel/.private/yolov5_ros/lib/yolov5_ros/cmake.lock /media/jetson/home/selfdriving/devel/lib/yolov5_ros/cmake.lock
-/media/jetson/home/selfdriving/devel/.private/yolov5_ros/lib/pkgconfig/yolov5_ros.pc /media/jetson/home/selfdriving/devel/lib/pkgconfig/yolov5_ros.pc
+/home/fachri/selfdriving/devel/.private/yolov5_ros/cmake.lock /home/fachri/selfdriving/devel/./cmake.lock
+/home/fachri/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake
+/home/fachri/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig.cmake /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig.cmake
+/home/fachri/selfdriving/devel/.private/yolov5_ros/lib/pkgconfig/yolov5_ros.pc /home/fachri/selfdriving/devel/lib/pkgconfig/yolov5_ros.pc
+/home/fachri/selfdriving/devel/.private/yolov5_ros/lib/yolov5_ros/cmake.lock /home/fachri/selfdriving/devel/lib/yolov5_ros/cmake.lock
+/home/fachri/selfdriving/devel/.private/yolov5_ros/lib/yolov5_ros/detect.py /home/fachri/selfdriving/devel/lib/yolov5_ros/detect.py

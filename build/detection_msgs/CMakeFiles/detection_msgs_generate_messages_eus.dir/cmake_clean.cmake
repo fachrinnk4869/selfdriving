@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/manifest.l"
-  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/msg/BoundingBox.l"
-  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/msg/BoundingBoxes.l"
+  "/home/fachri/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/manifest.l"
+  "/home/fachri/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/msg/BoundingBox.l"
+  "/home/fachri/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/msg/BoundingBoxes.l"
   "CMakeFiles/detection_msgs_generate_messages_eus"
 )
 

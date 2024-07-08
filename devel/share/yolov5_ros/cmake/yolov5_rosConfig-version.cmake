@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake
+/home/fachri/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake

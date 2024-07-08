@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /media/jetson/home/selfdriving/devel/.private/angle_publisher/setup.sh
+    local-name: /home/fachri/selfdriving/devel/.private/angle_publisher/setup.sh

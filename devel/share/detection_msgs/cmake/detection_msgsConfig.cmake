@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/detection_msgs/cmake/detection_msgsConfig.cmake
+/home/fachri/selfdriving/devel/.private/detection_msgs/share/detection_msgs/cmake/detection_msgsConfig.cmake

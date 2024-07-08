@@ -1,4 +1,4 @@
-prefix=/media/jetson/home/selfdriving/devel/.private/gps
+prefix=/home/fachri/selfdriving/devel/.private/gps
 
 Name: gps
 Description: Description of gps

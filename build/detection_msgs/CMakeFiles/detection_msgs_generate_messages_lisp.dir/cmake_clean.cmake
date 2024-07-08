@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/common-lisp/ros/detection_msgs/msg/BoundingBox.lisp"
-  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/common-lisp/ros/detection_msgs/msg/BoundingBoxes.lisp"
+  "/home/fachri/selfdriving/devel/.private/detection_msgs/share/common-lisp/ros/detection_msgs/msg/BoundingBox.lisp"
+  "/home/fachri/selfdriving/devel/.private/detection_msgs/share/common-lisp/ros/detection_msgs/msg/BoundingBoxes.lisp"
   "CMakeFiles/detection_msgs_generate_messages_lisp"
 )
 

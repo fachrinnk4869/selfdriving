@@ -4,5 +4,5 @@ PROJECT_PKG_CONFIG_INCLUDE_DIRS = "${prefix}/include".split(';') if "${prefix}/i
 PROJECT_CATKIN_DEPENDS = "message_generation;std_msgs;geometry_msgs;sensor_msgs".replace(';', ' ')
 PKG_CONFIG_LIBRARIES_WITH_PREFIX = "".split(';') if "" != "" else []
 PROJECT_NAME = "zed_interfaces"
-PROJECT_SPACE_DIR = "/media/jetson/home/selfdriving/install"
+PROJECT_SPACE_DIR = "/home/fachri/selfdriving/install"
 PROJECT_VERSION = "3.5.0"

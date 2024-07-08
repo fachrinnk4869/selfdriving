@@ -1,4 +1,4 @@
-prefix=/media/jetson/home/selfdriving/install
+prefix=/home/fachri/selfdriving/install
 
 Name: detection_msgs
 Description: Description of detection_msgs

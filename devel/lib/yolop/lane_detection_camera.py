@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/yolop/lib/yolop/lane_detection_camera.py
+/home/fachri/selfdriving/devel/.private/yolop/lib/yolop/lane_detection_camera.py

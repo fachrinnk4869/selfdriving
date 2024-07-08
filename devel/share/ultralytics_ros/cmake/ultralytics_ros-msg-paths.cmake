@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/ultralytics_ros/cmake/ultralytics_ros-msg-paths.cmake
+/home/fachri/selfdriving/devel/.private/ultralytics_ros/share/ultralytics_ros/cmake/ultralytics_ros-msg-paths.cmake

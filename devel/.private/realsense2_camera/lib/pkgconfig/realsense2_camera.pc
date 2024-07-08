@@ -1,8 +1,8 @@
-prefix=/media/jetson/home/selfdriving/devel/.private/realsense2_camera
+prefix=/home/fachri/selfdriving/devel/.private/realsense2_camera
 
 Name: realsense2_camera
 Description: Description of realsense2_camera
 Version: 2.3.2
-Cflags: -I/media/jetson/home/selfdriving/devel/.private/realsense2_camera/include
+Cflags: -I/home/fachri/selfdriving/devel/.private/realsense2_camera/include
 Libs: -L${prefix}/lib -lrealsense2_camera
 Requires: message_runtime roscpp sensor_msgs std_msgs nodelet cv_bridge image_transport ddynamic_reconfigure nav_msgs

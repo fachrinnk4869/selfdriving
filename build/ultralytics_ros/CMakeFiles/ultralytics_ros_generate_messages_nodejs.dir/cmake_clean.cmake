@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js"
+  "/home/fachri/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/YoloResult.js"
   "CMakeFiles/ultralytics_ros_generate_messages_nodejs"
 )
 

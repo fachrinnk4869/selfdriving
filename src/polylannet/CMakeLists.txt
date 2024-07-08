@@ -162,6 +162,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   src/test.py
   src/infer.py
+  src/video-infer.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 

@@ -1,4 +1,4 @@
-prefix=/media/jetson/home/selfdriving/install
+prefix=/home/fachri/selfdriving/install
 
 Name: ultralytics_ros
 Description: Description of ultralytics_ros

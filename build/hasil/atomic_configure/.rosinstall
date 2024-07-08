@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /media/jetson/home/selfdriving/devel/.private/hasil/setup.sh
+    local-name: /home/fachri/selfdriving/devel/.private/hasil/setup.sh

@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/manifest.l
+/home/fachri/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/manifest.l

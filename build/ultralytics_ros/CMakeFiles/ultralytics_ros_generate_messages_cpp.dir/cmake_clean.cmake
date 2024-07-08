@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/include/ultralytics_ros/YoloResult.h"
+  "/home/fachri/selfdriving/devel/.private/ultralytics_ros/include/ultralytics_ros/YoloResult.h"
   "CMakeFiles/ultralytics_ros_generate_messages_cpp"
 )
 

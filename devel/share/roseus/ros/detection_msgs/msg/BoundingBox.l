@@ -1,1 +1,1 @@
-/media/jetson/home/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/msg/BoundingBox.l
+/home/fachri/selfdriving/devel/.private/detection_msgs/share/roseus/ros/detection_msgs/msg/BoundingBox.l
