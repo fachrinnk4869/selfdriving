@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/fachri/selfdriving/devel/.private/zed_interfaces:$CMAKE_PREFIX_PATH"
-export PWD='/home/fachri/selfdriving/build/zed_interfaces'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/fachri/selfdriving/devel/.private/zed_interfaces/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/fachri/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/media/jetson/home/selfdriving/devel/.private/zed_interfaces:$CMAKE_PREFIX_PATH"
+export PWD='/media/jetson/home/selfdriving/build/zed_interfaces'
+export ROSLISP_PACKAGE_DIRECTORIES="/media/jetson/home/selfdriving/devel/.private/zed_interfaces/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/media/jetson/home/selfdriving/src/zed-ros-wrapper/zed-ros-interfaces:$ROS_PACKAGE_PATH"

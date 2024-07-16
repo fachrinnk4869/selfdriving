@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/detection_msgs/lib/pkgconfig/detection_msgs.pc
+/media/jetson/home/selfdriving/devel/.private/detection_msgs/lib/pkgconfig/detection_msgs.pc

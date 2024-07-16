@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/catkin_tools_prebuild/local_setup.zsh
+/media/jetson/home/selfdriving/devel/.private/catkin_tools_prebuild/local_setup.zsh

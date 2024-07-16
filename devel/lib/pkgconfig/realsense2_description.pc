@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc
+/media/jetson/home/selfdriving/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc

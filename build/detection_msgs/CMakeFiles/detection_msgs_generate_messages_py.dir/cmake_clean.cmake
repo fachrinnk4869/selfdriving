@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
-  "/home/fachri/selfdriving/devel/.private/detection_msgs/lib/python3/dist-packages/detection_msgs/msg/_BoundingBox.py"
-  "/home/fachri/selfdriving/devel/.private/detection_msgs/lib/python3/dist-packages/detection_msgs/msg/_BoundingBoxes.py"
-  "/home/fachri/selfdriving/devel/.private/detection_msgs/lib/python3/dist-packages/detection_msgs/msg/__init__.py"
+  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/lib/python3/dist-packages/detection_msgs/msg/_BoundingBox.py"
+  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/lib/python3/dist-packages/detection_msgs/msg/_BoundingBoxes.py"
+  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/lib/python3/dist-packages/detection_msgs/msg/__init__.py"
   "CMakeFiles/detection_msgs_generate_messages_py"
 )
 

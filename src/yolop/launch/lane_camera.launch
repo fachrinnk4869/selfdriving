@@ -5,7 +5,7 @@
     <node name="lane_detection_camera" pkg="yolop" type="lane_detection_camera.py" output='screen'>
         <!-- ROS parameters for lane_detection_camera -->
         <param name="weights" type="string" value="$(find yolop)/src/yolop/data/weights/yolopv2.pt"/>
-        <param name="source" type="string" value="$(find yolop)/src/yolop/input/drive.mp4"/>
+        <param name="source" type="string" value="0"/>
         <param name="img_size" type="int" value="640"/>
         <param name="conf_thres" type="double" value="0.3"/>
         <param name="iou_thres" type="double" value="0.45"/>

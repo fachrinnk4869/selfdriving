@@ -13,21 +13,21 @@ fi
 
 echo_and_run() { echo "+ $@" ; "$@" ; }
 
-echo_and_run cd "/home/fachri/selfdriving/src/yolop"
+echo_and_run cd "/media/jetson/home/selfdriving/src/yolop"
 
 # ensure that Python install destination exists
-echo_and_run mkdir -p "$DESTDIR/home/fachri/selfdriving/install/lib/python3/dist-packages"
+echo_and_run mkdir -p "$DESTDIR/media/jetson/home/selfdriving/install/lib/python3/dist-packages"
 
 # Note that PYTHONPATH is pulled from the environment to support installing
 # into one location when some dependencies were installed in another
 # location, #123.
 echo_and_run /usr/bin/env \
-    PYTHONPATH="/home/fachri/selfdriving/install/lib/python3/dist-packages:/home/fachri/selfdriving/build/yolop/lib/python3/dist-packages:$PYTHONPATH" \
-    CATKIN_BINARY_DIR="/home/fachri/selfdriving/build/yolop" \
+    PYTHONPATH="/media/jetson/home/selfdriving/install/lib/python3/dist-packages:/media/jetson/home/selfdriving/build/yolop/lib/python3/dist-packages:$PYTHONPATH" \
+    CATKIN_BINARY_DIR="/media/jetson/home/selfdriving/build/yolop" \
     "/usr/bin/python3" \
-    "/home/fachri/selfdriving/src/yolop/setup.py" \
+    "/media/jetson/home/selfdriving/src/yolop/setup.py" \
      \
-    build --build-base "/home/fachri/selfdriving/build/yolop" \
+    build --build-base "/media/jetson/home/selfdriving/build/yolop" \
     install \
     --root="${DESTDIR-/}" \
-    --install-layout=deb --prefix="/home/fachri/selfdriving/install" --install-scripts="/home/fachri/selfdriving/install/bin"
+    --install-layout=deb --prefix="/media/jetson/home/selfdriving/install" --install-scripts="/media/jetson/home/selfdriving/install/bin"

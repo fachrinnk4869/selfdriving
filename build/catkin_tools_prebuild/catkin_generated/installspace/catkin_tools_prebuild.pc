@@ -1,4 +1,4 @@
-prefix=/home/fachri/selfdriving/install
+prefix=/media/jetson/home/selfdriving/install
 
 Name: catkin_tools_prebuild
 Description: Description of catkin_tools_prebuild

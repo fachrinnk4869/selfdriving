@@ -1,3 +1,13 @@
-Symlinking /home/fachri/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig-version.cmake
-Symlinking /home/fachri/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake
-Symlinking /home/fachri/selfdriving/devel/lib/pkgconfig/dummy_curvature.pc
+Symlinking /media/jetson/home/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/dummy_curvature.pc
+Cleaning: (/home/fachri/selfdriving/devel/.private/dummy_curvature/cmake.lock, /home/fachri/selfdriving/devel/./cmake.lock)
+Cleaning: (/home/fachri/selfdriving/devel/.private/dummy_curvature/share/dummy_curvature/cmake/dummy_curvatureConfig-version.cmake, /home/fachri/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig-version.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/dummy_curvature/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake, /home/fachri/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/dummy_curvature/lib/pkgconfig/dummy_curvature.pc, /home/fachri/selfdriving/devel/lib/pkgconfig/dummy_curvature.pc)
+Unlinking: /home/fachri/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/pkgconfig/dummy_curvature.pc
+Already unlinked: {}

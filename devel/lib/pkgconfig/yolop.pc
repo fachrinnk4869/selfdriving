@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/yolop/lib/pkgconfig/yolop.pc
+/media/jetson/home/selfdriving/devel/.private/yolop/lib/pkgconfig/yolop.pc

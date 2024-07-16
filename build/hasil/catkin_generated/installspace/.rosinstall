@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/fachri/selfdriving/install/setup.sh
+    local-name: /media/jetson/home/selfdriving/install/setup.sh

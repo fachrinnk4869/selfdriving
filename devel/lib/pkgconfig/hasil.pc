@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/hasil/lib/pkgconfig/hasil.pc
+/media/jetson/home/selfdriving/devel/.private/hasil/lib/pkgconfig/hasil.pc

@@ -1,7 +1,7 @@
 gps
-/home/fachri/selfdriving/devel/.private/gps/cmake.lock /home/fachri/selfdriving/devel/./cmake.lock
-/home/fachri/selfdriving/devel/.private/gps/share/gps/cmake/gpsConfig.cmake /home/fachri/selfdriving/devel/share/gps/cmake/gpsConfig.cmake
-/home/fachri/selfdriving/devel/.private/gps/share/gps/cmake/gpsConfig-version.cmake /home/fachri/selfdriving/devel/share/gps/cmake/gpsConfig-version.cmake
-/home/fachri/selfdriving/devel/.private/gps/lib/pkgconfig/gps.pc /home/fachri/selfdriving/devel/lib/pkgconfig/gps.pc
-/home/fachri/selfdriving/devel/.private/gps/lib/gps/tcp_mevi.py /home/fachri/selfdriving/devel/lib/gps/tcp_mevi.py
-/home/fachri/selfdriving/devel/.private/gps/lib/gps/cmake.lock /home/fachri/selfdriving/devel/lib/gps/cmake.lock
+/media/jetson/home/selfdriving/devel/.private/gps/cmake.lock /media/jetson/home/selfdriving/devel/./cmake.lock
+/media/jetson/home/selfdriving/devel/.private/gps/share/gps/cmake/gpsConfig-version.cmake /media/jetson/home/selfdriving/devel/share/gps/cmake/gpsConfig-version.cmake
+/media/jetson/home/selfdriving/devel/.private/gps/share/gps/cmake/gpsConfig.cmake /media/jetson/home/selfdriving/devel/share/gps/cmake/gpsConfig.cmake
+/media/jetson/home/selfdriving/devel/.private/gps/lib/pkgconfig/gps.pc /media/jetson/home/selfdriving/devel/lib/pkgconfig/gps.pc
+/media/jetson/home/selfdriving/devel/.private/gps/lib/gps/cmake.lock /media/jetson/home/selfdriving/devel/lib/gps/cmake.lock
+/media/jetson/home/selfdriving/devel/.private/gps/lib/gps/tcp_mevi.py /media/jetson/home/selfdriving/devel/lib/gps/tcp_mevi.py

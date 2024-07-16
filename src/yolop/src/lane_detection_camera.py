@@ -86,6 +86,7 @@ def detect(cv_image=None):
     
     left_curve_pub = rospy.Publisher('left_lane_curve', Float32, queue_size=10)
     right_curve_pub = rospy.Publisher('right_lane_curve', Float32, queue_size=10)
+    center_curve_pub = rospy.Publisher('center_lane_curve', Float32, queue_size=10)
     save_dir = Path(increment_path(Path(project) / name, exist_ok=exist_ok))  # increment run
     (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
     inf_time = AverageMeter()
@@ -127,6 +128,7 @@ def detect(cv_image=None):
         first_item = next(iter(dataset))
         _, _, initial_im0s, _ = first_item
         ROITrackbar(initial_im0s)
+    
     for path, img, im0s, vid_cap in dataset:
         frame_count += 1
         img = torch.from_numpy(img).to(device)
@@ -190,7 +192,7 @@ def detect(cv_image=None):
 
             # Print time (inference)
             print(f'{s}Done. ({t2 - t1:.3f}s)')
-            output_image, left_curve, right_curve = show_seg_result(im0, ll_seg_mask, is_demo=True)
+            output_image, left_curve, right_curve, center_curve = show_seg_result(im0, ll_seg_mask, is_demo=True)
             try:
                 left_curve_pub.publish(left_curve)
             except NameError:
@@ -200,6 +202,10 @@ def detect(cv_image=None):
                 right_curve_pub.publish(right_curve)
             except NameError:
                 rospy.logwarn("Right curve not calculated.")
+            try:
+                center_curve_pub.publish(center_curve)
+            except NameError:
+                rospy.logwarn("Center curve not calculated.")
                 
             cv2.putText(
                 output_image,
@@ -256,11 +262,11 @@ if __name__ == '__main__':
     path = roslib.packages.get_pkg_dir("yolop")
     
     # Subscribe to the camera topic
-    rospy.Subscriber("/zed2i/zed_node/rgb/image_rect_color", Image, image_callback)
+    rospy.Subscriber("/cv_camera/image_raw", Image, image_callback)
     
     with torch.no_grad():
         # Initial call to detect in case of using image files
-        if not rospy.has_param('/zed2i/zed_node/rgb/image_rect_color'):
+        if not rospy.has_param('/cv_camera/image_raw'):
             detect()
     
     rospy.spin()

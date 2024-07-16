@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/msg/IMUInfo.js
+/media/jetson/home/selfdriving/devel/.private/realsense2_camera/share/gennodejs/ros/realsense2_camera/msg/IMUInfo.js

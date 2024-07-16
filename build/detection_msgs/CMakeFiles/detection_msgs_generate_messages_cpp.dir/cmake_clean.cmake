@@ -1,6 +1,6 @@
 file(REMOVE_RECURSE
-  "/home/fachri/selfdriving/devel/.private/detection_msgs/include/detection_msgs/BoundingBox.h"
-  "/home/fachri/selfdriving/devel/.private/detection_msgs/include/detection_msgs/BoundingBoxes.h"
+  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/include/detection_msgs/BoundingBox.h"
+  "/media/jetson/home/selfdriving/devel/.private/detection_msgs/include/detection_msgs/BoundingBoxes.h"
   "CMakeFiles/detection_msgs_generate_messages_cpp"
 )
 

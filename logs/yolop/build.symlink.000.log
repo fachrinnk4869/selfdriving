@@ -1,7 +1,29 @@
-Symlinking /home/fachri/selfdriving/devel/share/yolop/cmake/yolopConfig.cmake
-Symlinking /home/fachri/selfdriving/devel/share/yolop/cmake/yolopConfig-version.cmake
-Symlinking /home/fachri/selfdriving/devel/lib/python3/dist-packages/yolop/__init__.py
-Symlinking /home/fachri/selfdriving/devel/lib/pkgconfig/yolop.pc
-Symlinking /home/fachri/selfdriving/devel/lib/yolop/lane_detection_camera.py
-Symlinking /home/fachri/selfdriving/devel/lib/yolop/cmake.lock
-Symlinking /home/fachri/selfdriving/devel/lib/yolop/lane_detection_node.py
+Symlinking /media/jetson/home/selfdriving/devel/share/yolop/cmake/yolopConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/yolop/cmake/yolopConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/yolop.pc
+Symlinking /media/jetson/home/selfdriving/devel/lib/yolop/lane_detection_node.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/yolop/cmake.lock
+Symlinking /media/jetson/home/selfdriving/devel/lib/yolop/lane_detection_camera.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/yolop/__init__.py
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolop/cmake.lock, /home/fachri/selfdriving/devel/./cmake.lock)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolop/share/yolop/cmake/yolopConfig.cmake, /home/fachri/selfdriving/devel/share/yolop/cmake/yolopConfig.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolop/share/yolop/cmake/yolopConfig-version.cmake, /home/fachri/selfdriving/devel/share/yolop/cmake/yolopConfig-version.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolop/lib/python3/dist-packages/yolop/__init__.py, /home/fachri/selfdriving/devel/lib/python3/dist-packages/yolop/__init__.py)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolop/lib/pkgconfig/yolop.pc, /home/fachri/selfdriving/devel/lib/pkgconfig/yolop.pc)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolop/lib/yolop/lane_detection_camera.py, /home/fachri/selfdriving/devel/lib/yolop/lane_detection_camera.py)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolop/lib/yolop/cmake.lock, /home/fachri/selfdriving/devel/lib/yolop/cmake.lock)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolop/lib/yolop/lane_detection_node.py, /home/fachri/selfdriving/devel/lib/yolop/lane_detection_node.py)
+Unlinking: /home/fachri/selfdriving/devel/share/yolop/cmake/yolopConfig.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/share/yolop/cmake/yolopConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/python3/dist-packages/yolop/__init__.py
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/pkgconfig/yolop.pc
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/yolop/lane_detection_camera.py
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/yolop/cmake.lock
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/yolop/lane_detection_node.py
+Already unlinked: {}

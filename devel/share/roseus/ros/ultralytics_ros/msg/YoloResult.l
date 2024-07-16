@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/ultralytics_ros/share/roseus/ros/ultralytics_ros/msg/YoloResult.l
+/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/roseus/ros/ultralytics_ros/msg/YoloResult.l

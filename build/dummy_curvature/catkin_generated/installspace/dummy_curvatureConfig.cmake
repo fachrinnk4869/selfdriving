@@ -67,14 +67,14 @@ set(dummy_curvature_CONFIG_INCLUDED TRUE)
 
 # set variables for source/devel/install prefixes
 if("FALSE" STREQUAL "TRUE")
-  set(dummy_curvature_SOURCE_PREFIX /home/fachri/selfdriving/src/dummy_curvature)
-  set(dummy_curvature_DEVEL_PREFIX /home/fachri/selfdriving/devel/.private/dummy_curvature)
+  set(dummy_curvature_SOURCE_PREFIX /media/jetson/home/selfdriving/src/dummy_curvature)
+  set(dummy_curvature_DEVEL_PREFIX /media/jetson/home/selfdriving/devel/.private/dummy_curvature)
   set(dummy_curvature_INSTALL_PREFIX "")
   set(dummy_curvature_PREFIX ${dummy_curvature_DEVEL_PREFIX})
 else()
   set(dummy_curvature_SOURCE_PREFIX "")
   set(dummy_curvature_DEVEL_PREFIX "")
-  set(dummy_curvature_INSTALL_PREFIX /home/fachri/selfdriving/install)
+  set(dummy_curvature_INSTALL_PREFIX /media/jetson/home/selfdriving/install)
   set(dummy_curvature_PREFIX ${dummy_curvature_INSTALL_PREFIX})
 endif()
 
@@ -154,7 +154,7 @@ foreach(library ${libraries})
     set(lib_path "")
     set(lib "${library}-NOTFOUND")
     # since the path where the library is found is returned we have to iterate over the paths manually
-    foreach(path /home/fachri/selfdriving/install/lib;/home/fachri/selfdriving/devel/lib;/opt/ros/noetic/lib)
+    foreach(path /media/jetson/home/selfdriving/install/lib;/media/jetson/home/selfdriving/devel/lib;/opt/ros/noetic/lib)
       find_library(lib ${library}
         PATHS ${path}
         NO_DEFAULT_PATH NO_CMAKE_FIND_ROOT_PATH)

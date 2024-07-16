@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/dummy_curvature/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake
+/media/jetson/home/selfdriving/devel/.private/dummy_curvature/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake

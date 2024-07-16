@@ -1,4 +1,4 @@
-prefix=/home/fachri/selfdriving/devel/.private/polylannet
+prefix=/media/jetson/home/selfdriving/devel/.private/polylannet
 
 Name: polylannet
 Description: Description of polylannet

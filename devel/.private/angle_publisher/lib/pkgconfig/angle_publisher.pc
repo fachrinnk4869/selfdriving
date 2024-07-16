@@ -1,4 +1,4 @@
-prefix=/home/fachri/selfdriving/devel/.private/angle_publisher
+prefix=/media/jetson/home/selfdriving/devel/.private/angle_publisher
 
 Name: angle_publisher
 Description: Description of angle_publisher

@@ -1,5 +1,21 @@
-Linked: (/home/fachri/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake, /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake)
-Linked: (/home/fachri/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig.cmake, /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig.cmake)
-Linked: (/home/fachri/selfdriving/devel/.private/yolov5_ros/lib/pkgconfig/yolov5_ros.pc, /home/fachri/selfdriving/devel/lib/pkgconfig/yolov5_ros.pc)
-Linked: (/home/fachri/selfdriving/devel/.private/yolov5_ros/lib/yolov5_ros/cmake.lock, /home/fachri/selfdriving/devel/lib/yolov5_ros/cmake.lock)
-Linked: (/home/fachri/selfdriving/devel/.private/yolov5_ros/lib/yolov5_ros/detect.py, /home/fachri/selfdriving/devel/lib/yolov5_ros/detect.py)
+Symlinking /media/jetson/home/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/lib/yolov5_ros/detect.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/yolov5_ros/cmake.lock
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/yolov5_ros.pc
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolov5_ros/cmake.lock, /home/fachri/selfdriving/devel/./cmake.lock)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake, /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolov5_ros/share/yolov5_ros/cmake/yolov5_rosConfig.cmake, /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolov5_ros/lib/pkgconfig/yolov5_ros.pc, /home/fachri/selfdriving/devel/lib/pkgconfig/yolov5_ros.pc)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolov5_ros/lib/yolov5_ros/cmake.lock, /home/fachri/selfdriving/devel/lib/yolov5_ros/cmake.lock)
+Cleaning: (/home/fachri/selfdriving/devel/.private/yolov5_ros/lib/yolov5_ros/detect.py, /home/fachri/selfdriving/devel/lib/yolov5_ros/detect.py)
+Unlinking: /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/share/yolov5_ros/cmake/yolov5_rosConfig.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/pkgconfig/yolov5_ros.pc
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/yolov5_ros/cmake.lock
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/yolov5_ros/detect.py
+Already unlinked: {}

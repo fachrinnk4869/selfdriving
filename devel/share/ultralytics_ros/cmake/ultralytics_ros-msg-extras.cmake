@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/ultralytics_ros/share/ultralytics_ros/cmake/ultralytics_ros-msg-extras.cmake
+/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/ultralytics_ros/cmake/ultralytics_ros-msg-extras.cmake

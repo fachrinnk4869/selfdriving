@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/yolop/share/yolop/cmake/yolopConfig-version.cmake
+/media/jetson/home/selfdriving/devel/.private/yolop/share/yolop/cmake/yolopConfig-version.cmake

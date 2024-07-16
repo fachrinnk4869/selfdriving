@@ -1,8 +1,8 @@
-# Install script for directory: /home/fachri/selfdriving/src/yolop
+# Install script for directory: /media/jetson/home/selfdriving/src/yolop
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
-  set(CMAKE_INSTALL_PREFIX "/home/fachri/selfdriving/install")
+  set(CMAKE_INSTALL_PREFIX "/media/jetson/home/selfdriving/install")
 endif()
 string(REGEX REPLACE "/$" "" CMAKE_INSTALL_PREFIX "${CMAKE_INSTALL_PREFIX}")
 
@@ -37,12 +37,7 @@ if(NOT DEFINED CMAKE_CROSSCOMPILING)
   set(CMAKE_CROSSCOMPILING "FALSE")
 endif()
 
-# Set default install directory permissions.
-if(NOT DEFINED CMAKE_OBJDUMP)
-  set(CMAKE_OBJDUMP "/usr/bin/objdump")
-endif()
-
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   
       if (NOT EXISTS "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
         file(MAKE_DIRECTORY "$ENV{DESTDIR}${CMAKE_INSTALL_PREFIX}")
@@ -52,124 +47,124 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
       endif()
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/fachri/selfdriving/install/_setup_util.py")
+   "/media/jetson/home/selfdriving/install/_setup_util.py")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE PROGRAM FILES "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/_setup_util.py")
+file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE PROGRAM FILES "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/_setup_util.py")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/fachri/selfdriving/install/env.sh")
+   "/media/jetson/home/selfdriving/install/env.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE PROGRAM FILES "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/env.sh")
+file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE PROGRAM FILES "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/env.sh")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/fachri/selfdriving/install/setup.bash;/home/fachri/selfdriving/install/local_setup.bash")
+   "/media/jetson/home/selfdriving/install/setup.bash;/media/jetson/home/selfdriving/install/local_setup.bash")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE FILE FILES
-    "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/setup.bash"
-    "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/local_setup.bash"
+file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE FILE FILES
+    "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/setup.bash"
+    "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/local_setup.bash"
     )
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/fachri/selfdriving/install/setup.sh;/home/fachri/selfdriving/install/local_setup.sh")
+   "/media/jetson/home/selfdriving/install/setup.sh;/media/jetson/home/selfdriving/install/local_setup.sh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE FILE FILES
-    "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/setup.sh"
-    "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/local_setup.sh"
+file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE FILE FILES
+    "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/setup.sh"
+    "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/local_setup.sh"
     )
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/fachri/selfdriving/install/setup.zsh;/home/fachri/selfdriving/install/local_setup.zsh")
+   "/media/jetson/home/selfdriving/install/setup.zsh;/media/jetson/home/selfdriving/install/local_setup.zsh")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE FILE FILES
-    "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/setup.zsh"
-    "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/local_setup.zsh"
+file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE FILE FILES
+    "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/setup.zsh"
+    "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/local_setup.zsh"
     )
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   list(APPEND CMAKE_ABSOLUTE_DESTINATION_FILES
-   "/home/fachri/selfdriving/install/.rosinstall")
+   "/media/jetson/home/selfdriving/install/.rosinstall")
   if(CMAKE_WARN_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(WARNING "ABSOLUTE path INSTALL DESTINATION : ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
   if(CMAKE_ERROR_ON_ABSOLUTE_INSTALL_DESTINATION)
     message(FATAL_ERROR "ABSOLUTE path INSTALL DESTINATION forbidden (by caller): ${CMAKE_ABSOLUTE_DESTINATION_FILES}")
   endif()
-  file(INSTALL DESTINATION "/home/fachri/selfdriving/install" TYPE FILE FILES "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/.rosinstall")
+file(INSTALL DESTINATION "/media/jetson/home/selfdriving/install" TYPE FILE FILES "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/.rosinstall")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  include("/home/fachri/selfdriving/build/yolop/catkin_generated/safe_execute_install.cmake")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  include("/media/jetson/home/selfdriving/build/yolop/catkin_generated/safe_execute_install.cmake")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/yolop.pc")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/pkgconfig" TYPE FILE FILES "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/yolop.pc")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/yolop/cmake" TYPE FILE FILES
-    "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/yolopConfig.cmake"
-    "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/yolopConfig-version.cmake"
+    "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/yolopConfig.cmake"
+    "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/yolopConfig-version.cmake"
     )
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/yolop" TYPE FILE FILES "/home/fachri/selfdriving/src/yolop/package.xml")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/yolop" TYPE FILE FILES "/media/jetson/home/selfdriving/src/yolop/package.xml")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/yolop" TYPE PROGRAM FILES "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/lane_detection_node.py")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/yolop" TYPE PROGRAM FILES "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/lane_detection_node.py")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/yolop" TYPE PROGRAM FILES "/home/fachri/selfdriving/build/yolop/catkin_generated/installspace/lane_detection_camera.py")
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/yolop" TYPE PROGRAM FILES "/media/jetson/home/selfdriving/build/yolop/catkin_generated/installspace/lane_detection_camera.py")
 endif()
 
-if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
+if("x${CMAKE_INSTALL_COMPONENT}x" STREQUAL "xUnspecifiedx" OR NOT CMAKE_INSTALL_COMPONENT)
   file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/lib/yolop" TYPE PROGRAM FILES
-    "/home/fachri/selfdriving/src/yolop/src/lane_detection_node.py"
-    "/home/fachri/selfdriving/src/yolop/src/lane_detection_camera.py"
+    "/media/jetson/home/selfdriving/src/yolop/src/lane_detection_node.py"
+    "/media/jetson/home/selfdriving/src/yolop/src/lane_detection_camera.py"
     )
 endif()
 
 if(NOT CMAKE_INSTALL_LOCAL_ONLY)
   # Include the install script for each subdirectory.
-  include("/home/fachri/selfdriving/build/yolop/gtest/cmake_install.cmake")
+  include("/media/jetson/home/selfdriving/build/yolop/gtest/cmake_install.cmake")
 
 endif()
 
@@ -181,5 +176,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/home/fachri/selfdriving/build/yolop/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/media/jetson/home/selfdriving/build/yolop/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

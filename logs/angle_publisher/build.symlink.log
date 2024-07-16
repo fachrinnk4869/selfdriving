@@ -1,5 +1,21 @@
-Linked: (/home/fachri/selfdriving/devel/.private/angle_publisher/share/angle_publisher/cmake/angle_publisherConfig-version.cmake, /home/fachri/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig-version.cmake)
-Linked: (/home/fachri/selfdriving/devel/.private/angle_publisher/share/angle_publisher/cmake/angle_publisherConfig.cmake, /home/fachri/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig.cmake)
-Linked: (/home/fachri/selfdriving/devel/.private/angle_publisher/lib/angle_publisher/cmake.lock, /home/fachri/selfdriving/devel/lib/angle_publisher/cmake.lock)
-Linked: (/home/fachri/selfdriving/devel/.private/angle_publisher/lib/angle_publisher/publish_angle.py, /home/fachri/selfdriving/devel/lib/angle_publisher/publish_angle.py)
-Linked: (/home/fachri/selfdriving/devel/.private/angle_publisher/lib/pkgconfig/angle_publisher.pc, /home/fachri/selfdriving/devel/lib/pkgconfig/angle_publisher.pc)
+Symlinking /media/jetson/home/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/angle_publisher.pc
+Symlinking /media/jetson/home/selfdriving/devel/lib/angle_publisher/publish_angle.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/angle_publisher/cmake.lock
+Cleaning: (/home/fachri/selfdriving/devel/.private/angle_publisher/cmake.lock, /home/fachri/selfdriving/devel/./cmake.lock)
+Cleaning: (/home/fachri/selfdriving/devel/.private/angle_publisher/share/angle_publisher/cmake/angle_publisherConfig-version.cmake, /home/fachri/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig-version.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/angle_publisher/share/angle_publisher/cmake/angle_publisherConfig.cmake, /home/fachri/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/angle_publisher/lib/angle_publisher/cmake.lock, /home/fachri/selfdriving/devel/lib/angle_publisher/cmake.lock)
+Cleaning: (/home/fachri/selfdriving/devel/.private/angle_publisher/lib/angle_publisher/publish_angle.py, /home/fachri/selfdriving/devel/lib/angle_publisher/publish_angle.py)
+Cleaning: (/home/fachri/selfdriving/devel/.private/angle_publisher/lib/pkgconfig/angle_publisher.pc, /home/fachri/selfdriving/devel/lib/pkgconfig/angle_publisher.pc)
+Unlinking: /home/fachri/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/angle_publisher/cmake.lock
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/angle_publisher/publish_angle.py
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/pkgconfig/angle_publisher.pc
+Already unlinked: {}

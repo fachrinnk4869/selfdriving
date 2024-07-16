@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/zed_interfaces/share/gennodejs/ros/zed_interfaces/msg/ObjectsStamped.js
+/media/jetson/home/selfdriving/devel/.private/zed_interfaces/share/gennodejs/ros/zed_interfaces/msg/ObjectsStamped.js

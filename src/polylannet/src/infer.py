@@ -60,7 +60,6 @@ def test(model, test_loader, exp_root, cfg, view, epoch, max_batches=None, verbo
 
     if verbose:
         logging.info("Starting testing.")
-
     # Test the model
     if epoch > 0:
         model.load_state_dict(torch.load(os.path.join(
@@ -74,6 +73,11 @@ def test(model, test_loader, exp_root, cfg, view, epoch, max_batches=None, verbo
     fps = cap.get(cv2.CAP_PROP_FPS)
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
+    
+    # Define the horizontal crop dimensions (example: crop 100 pixels from left and right)
+    crop_left = 200
+    crop_right = 200
+    cropped_width = frame_width - crop_left - crop_right
 
     # Initialize video writer
     fourcc = cv2.VideoWriter_fourcc(*'mp4v')
@@ -84,13 +88,18 @@ def test(model, test_loader, exp_root, cfg, view, epoch, max_batches=None, verbo
     prev_time = 0
     while cap.isOpened():
         ret, frame = cap.read()
+        if not ret:
+            # Reset to the beginning if the video ends
+            cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
+            continue
         current_time = time.time()
         elapsed_time = current_time - prev_time
         prev_time = current_time
         fps = 1 / elapsed_time if elapsed_time > 0 else 0
 
         with torch.no_grad():
-            # img = test_loader.dataset.__getitem__(frame)
+            # Apply vertical crop
+            frame = frame[:, crop_left:frame_width - crop_right]
             img_cv = cv2.resize(frame, (640, 360),
                                 interpolation=cv2.INTER_LINEAR)
             update_corners(None)
@@ -132,7 +141,7 @@ def test(model, test_loader, exp_root, cfg, view, epoch, max_batches=None, verbo
             # if view:
             outputs, extra_outputs = outputs
             preds = test_loader.dataset.draw_annotation(
-                img_path=frame,
+                img_path=warped_img,
                 pred=outputs[0].cpu().numpy(),
                 cls_pred=extra_outputs[0].cpu().numpy() if extra_outputs is not None else None)
             # Ensure preds is a valid image matrix

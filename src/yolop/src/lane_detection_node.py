@@ -49,6 +49,7 @@ def detect():
     left_curve_pub = rospy.Publisher('left_lane_curve', Float32, queue_size=10)
     fps_pub = rospy.Publisher('fps', Float32, queue_size=10)
     right_curve_pub = rospy.Publisher('right_lane_curve', Float32, queue_size=10)
+    center_curve_pub = rospy.Publisher('center_lane_curve', Float32, queue_size=10)
     save_dir = Path(increment_path(Path(project) / name, exist_ok=exist_ok))  # increment run
     (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
     inf_time = AverageMeter()
@@ -143,7 +144,7 @@ def detect():
 
             # Print time (inference)
             print(f'{s}Done. ({t2 - t1:.3f}s)')
-            output_image, left_curve, right_curve = show_seg_result(im0, ll_seg_mask, is_demo=True)
+            output_image, left_curve, right_curve, center_curve = show_seg_result(im0, ll_seg_mask, is_demo=True)
             try:
                 left_curve_pub.publish(left_curve)
             except NameError:
@@ -153,6 +154,10 @@ def detect():
                 right_curve_pub.publish(right_curve)
             except NameError:
                 rospy.logwarn("Right curve not calculated.")
+            try:
+                center_curve_pub.publish(center_curve)
+            except NameError:
+                rospy.logwarn("Center curve not calculated.")
             fps_pub.publish(fps)
             cv2.putText(
                 output_image,

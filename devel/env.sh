@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/catkin_tools_prebuild/env.sh
+/media/jetson/home/selfdriving/devel/.private/catkin_tools_prebuild/env.sh

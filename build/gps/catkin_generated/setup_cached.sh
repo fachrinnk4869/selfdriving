@@ -7,7 +7,7 @@
 # new environment variables
 
 # modified environment variables
-export CMAKE_PREFIX_PATH="/home/fachri/selfdriving/devel/.private/gps:$CMAKE_PREFIX_PATH"
-export PWD='/home/fachri/selfdriving/build/gps'
-export ROSLISP_PACKAGE_DIRECTORIES="/home/fachri/selfdriving/devel/.private/gps/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
-export ROS_PACKAGE_PATH="/home/fachri/selfdriving/src/gps:$ROS_PACKAGE_PATH"
+export CMAKE_PREFIX_PATH="/media/jetson/home/selfdriving/devel/.private/gps:$CMAKE_PREFIX_PATH"
+export PWD='/media/jetson/home/selfdriving/build/gps'
+export ROSLISP_PACKAGE_DIRECTORIES="/media/jetson/home/selfdriving/devel/.private/gps/share/common-lisp:$ROSLISP_PACKAGE_DIRECTORIES"
+export ROS_PACKAGE_PATH="/media/jetson/home/selfdriving/src/gps:$ROS_PACKAGE_PATH"

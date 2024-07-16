@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/fachri/selfdriving/devel/.private/gps/setup.sh
+    local-name: /media/jetson/home/selfdriving/devel/.private/gps/setup.sh

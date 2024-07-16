@@ -1,4 +1,4 @@
-prefix=/home/fachri/selfdriving/install
+prefix=/media/jetson/home/selfdriving/install
 
 Name: zed_interfaces
 Description: Description of zed_interfaces

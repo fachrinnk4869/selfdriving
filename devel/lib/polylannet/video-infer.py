@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/polylannet/lib/polylannet/video-infer.py
+/media/jetson/home/selfdriving/devel/.private/polylannet/lib/polylannet/video-infer.py

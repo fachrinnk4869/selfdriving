@@ -9,8 +9,8 @@ from torchvision import transforms
 import numpy as np
 import torch
 
-from lib.config import Config
-from utils.evaluator import Evaluator
+from polylannet.lib.config import Config
+from polylannet.utils.evaluator import Evaluator
 import cv2
 
 cv2.namedWindow('Image')# Create trackbars for each corner point

@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/dummy_curvature/lib/pkgconfig/dummy_curvature.pc
+/media/jetson/home/selfdriving/devel/.private/dummy_curvature/lib/pkgconfig/dummy_curvature.pc

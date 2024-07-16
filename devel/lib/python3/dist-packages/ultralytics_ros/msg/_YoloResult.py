@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/ultralytics_ros/lib/python3/dist-packages/ultralytics_ros/msg/_YoloResult.py
+/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/lib/python3/dist-packages/ultralytics_ros/msg/_YoloResult.py

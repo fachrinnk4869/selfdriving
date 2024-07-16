@@ -223,7 +223,8 @@ def find_nearest_lane(prediction, center, selected_y):
     return left, right
 
 # corners = np.float32([[0, 554], [291, 350], [954, 371], [1270, 578]])   
-corners = np.float32([[253, 697], [585, 456], [700, 456], [1061, 690]]) 
+# corners = np.float32([[253, 697], [585, 456], [700, 456], [1061, 690]]) 
+corners = np.float32([[0, 697], [300, 325], [980, 325], [1280, 690]]) 
 class ROITrackbar():
     def __init__(self, size):
         global corners
@@ -281,19 +282,12 @@ def show_seg_result(img, result, palette=None,is_demo=True):
         color_seg = color_area
         complete_lane_lines = result[1]
         
-        # print(result[0].shape)
-        # print(result[1].shape)
     # convert to BGR
     color_seg = color_seg[..., ::-1]
     color_mask = np.mean(color_seg, 2)
-    # print(color_mask)
-    # Display the frame
-    # # Define ROI based on image dimensions
+    
+    # image dimensions
     height, width = img.shape[:2]
-    # bottom_left = (200, height)
-    # bottom_right = (width-200, height)
-    # top_left = (width // 2 - 50, height // 2 + 50)
-    # top_right = (width // 2 + 50, height // 2 + 50)
     
     # Save top left and right explicitly and offset
     top_left = np.array([corners[0, 0], 0])
@@ -305,9 +299,9 @@ def show_seg_result(img, result, palette=None,is_demo=True):
     src_points = np.float32([corners[0], corners[1], corners[2], corners[3]])
     dst_points = np.float32([corners[0] + offset, top_left + offset, top_right - offset, corners[3] - offset])
     warped_img = warp_perspective(img, src_points, dst_points, (width, height))
+    
     cv2.imshow('bird_eye', warped_img)
     raw_image = warped_img.copy()
-    # img[color_mask != 0] = img[color_mask != 0] * 0.5 + color_seg[color_mask != 0] * 0.5
     img[color_mask != 0] = color_seg[color_mask != 0]
     
 
@@ -315,7 +309,7 @@ def show_seg_result(img, result, palette=None,is_demo=True):
     # Create a blank mask
     mask = np.zeros_like(img)
 
-    # Fill the ROI with white color
+    # Give the ROI border with yellow color
     roi_corners = np.float32([corners[0], corners[1], corners[2], corners[3]])
     src_pts = roi_corners.reshape((-1, 1, 2)).astype("int32")
     cv2.polylines(mask, [src_pts], True, (0, 255, 255), thickness=5)
@@ -329,7 +323,7 @@ def show_seg_result(img, result, palette=None,is_demo=True):
     # Overlay segmented result on the image with ROI
     img_with_seg = img_with_roi.copy()
     img_with_seg[masked_seg == 0] = 0
-    # Find the nearest left lane line
+    # Find the center of right and left line
     center = int(width // 2)
     # Choose the nearest lane line for each side (considering a distance threshold)
     src_points = np.float32([corners[0], corners[1], corners[2], corners[3]])
@@ -351,18 +345,18 @@ def show_seg_result(img, result, palette=None,is_demo=True):
         
         # Check if both left and right lane x-coordinates are found
         if left_nearest_x != 0:
-        # Append x and y positions to respective lists
+            # Append x and y positions to respective lists
             left_x_list.append(left_nearest_x)
             left_y_list.append(i)
             cv2.circle(raw_image, (left_nearest_x, i), 0, (0, 0, 255), 5)  # Red circle for left lane
             
         if right_nearest_x != 0:
-        # Append x and y positions to respective lists
+            # Append x and y positions to respective lists
             right_x_list.append(right_nearest_x)
             right_y_list.append(i)
+            # Draw circles on the raw image for visualization
             cv2.circle(raw_image, (right_nearest_x, i), 0, (0, 0, 255), 5)  # Red circle for right lane
 
-            # Draw circles on the raw image for visualization
 
     cv2.imshow('raw_image', raw_image)
     cv2.imshow('Image_with_roi', img_with_roi)
@@ -471,7 +465,18 @@ def show_seg_result(img, result, palette=None,is_demo=True):
         cv2.putText(output_img, 'Lane Deviation: {:.2f} m'.format(lane_deviation), (50, 200), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
     except:
         print("")
+    # equation for center
+    # try:
+    #     # Fit new polynomials to x,y in world space
+    #     center_fit_cr = np.sum([left_fit_cr,right_fit_cr],axis=0)
+    # except TypeError or UnboundLocalError:
+    #     print("Filtered data is empty. Unable to fit a polynomial.")
         
+    # try:
+    #     center_curve = ((1+(2*center_fit_cr[0]*y_eval*y_m_per_pix+center_fit_cr[1])**2)**1.5)/np.absolute(2*center_fit_cr[0])
+    # except:
+    #     center_curve = None
+    #     print("Filtered data is empty. Unable to fit a polynomial.")
     # Combine the result with the original image
     result = cv2.addWeighted(output_img, 1, raw_image, 1, 0)
     # Display the output image
@@ -484,8 +489,7 @@ def show_seg_result(img, result, palette=None,is_demo=True):
     warped_img = warp_perspective(img_with_roi, src_points, dst_points, (width, height))
     cv2.imshow('bird_eye2', warped_img)
     cv2.waitKey(1)
-    # Overlay segmented result on the bird's eye view image
-    return result, left_curve, right_curve
+    return result, left_curve, right_curve, None
 
 
 def increment_path(path, exist_ok=True, sep=''):

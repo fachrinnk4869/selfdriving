@@ -1,7 +1,44 @@
-Symlinking /home/fachri/selfdriving/devel/share/polylannet/cmake/polylannetConfig.cmake
-Symlinking /home/fachri/selfdriving/devel/share/polylannet/cmake/polylannetConfig-version.cmake
-Symlinking /home/fachri/selfdriving/devel/lib/python3/dist-packages/polylannet/__init__.py
-Symlinking /home/fachri/selfdriving/devel/lib/pkgconfig/polylannet.pc
-Symlinking /home/fachri/selfdriving/devel/lib/polylannet/cmake.lock
-Symlinking /home/fachri/selfdriving/devel/lib/polylannet/infer.py
-Symlinking /home/fachri/selfdriving/devel/lib/polylannet/test.py
+Symlinking /media/jetson/home/selfdriving/devel/share/polylannet/cmake/polylannetConfig-version.cmake
+Symlinking /media/jetson/home/selfdriving/devel/share/polylannet/cmake/polylannetConfig.cmake
+Symlinking /media/jetson/home/selfdriving/devel/lib/pkgconfig/polylannet.pc
+Symlinking /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/lib/__init__.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/utils/__init__.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/python3/dist-packages/cfgs/__init__.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/polylannet/infer.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/polylannet/video-infer.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/polylannet/test.py
+Symlinking /media/jetson/home/selfdriving/devel/lib/polylannet/cmake.lock
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/cmake.lock, /home/fachri/selfdriving/devel/./cmake.lock)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/share/polylannet/cmake/polylannetConfig.cmake, /home/fachri/selfdriving/devel/share/polylannet/cmake/polylannetConfig.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/share/polylannet/cmake/polylannetConfig-version.cmake, /home/fachri/selfdriving/devel/share/polylannet/cmake/polylannetConfig-version.cmake)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/lib/python3/dist-packages/cfgs/__init__.py, /home/fachri/selfdriving/devel/lib/python3/dist-packages/cfgs/__init__.py)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/lib/python3/dist-packages/utils/__init__.py, /home/fachri/selfdriving/devel/lib/python3/dist-packages/utils/__init__.py)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/lib/python3/dist-packages/lib/__init__.py, /home/fachri/selfdriving/devel/lib/python3/dist-packages/lib/__init__.py)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/lib/python3/dist-packages/polylannet/__init__.py, /home/fachri/selfdriving/devel/lib/python3/dist-packages/polylannet/__init__.py)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/lib/pkgconfig/polylannet.pc, /home/fachri/selfdriving/devel/lib/pkgconfig/polylannet.pc)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/lib/polylannet/cmake.lock, /home/fachri/selfdriving/devel/lib/polylannet/cmake.lock)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/lib/polylannet/video-infer.py, /home/fachri/selfdriving/devel/lib/polylannet/video-infer.py)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/lib/polylannet/infer.py, /home/fachri/selfdriving/devel/lib/polylannet/infer.py)
+Cleaning: (/home/fachri/selfdriving/devel/.private/polylannet/lib/polylannet/test.py, /home/fachri/selfdriving/devel/lib/polylannet/test.py)
+Unlinking: /home/fachri/selfdriving/devel/share/polylannet/cmake/polylannetConfig.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/share/polylannet/cmake/polylannetConfig-version.cmake
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/python3/dist-packages/cfgs/__init__.py
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/python3/dist-packages/utils/__init__.py
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/python3/dist-packages/lib/__init__.py
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/python3/dist-packages/polylannet/__init__.py
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/pkgconfig/polylannet.pc
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/polylannet/cmake.lock
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/polylannet/video-infer.py
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/polylannet/infer.py
+Already unlinked: {}
+Unlinking: /home/fachri/selfdriving/devel/lib/polylannet/test.py
+Already unlinked: {}

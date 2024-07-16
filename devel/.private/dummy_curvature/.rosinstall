@@ -1,2 +1,2 @@
 - setup-file:
-    local-name: /home/fachri/selfdriving/devel/.private/dummy_curvature/setup.sh
+    local-name: /media/jetson/home/selfdriving/devel/.private/dummy_curvature/setup.sh

@@ -1,1 +1,1 @@
-/home/fachri/selfdriving/devel/.private/gps/lib/pkgconfig/gps.pc
+/media/jetson/home/selfdriving/devel/.private/gps/lib/pkgconfig/gps.pc
