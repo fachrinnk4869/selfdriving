@@ -1,1 +1,0 @@
-/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/gennodejs/ros/ultralytics_ros/msg/_index.js

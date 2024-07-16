@@ -1,1 +1,0 @@
-/media/jetson/home/selfdriving/devel/.private/yolov5_ros/lib/yolov5_ros/detect.py

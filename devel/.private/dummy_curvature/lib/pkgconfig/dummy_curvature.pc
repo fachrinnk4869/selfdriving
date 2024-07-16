@@ -1,8 +1,0 @@
-prefix=/media/jetson/home/selfdriving/devel/.private/dummy_curvature
-
-Name: dummy_curvature
-Description: Description of dummy_curvature
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: rospy std_msgs

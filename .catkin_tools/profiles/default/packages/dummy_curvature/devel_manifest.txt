@@ -1,5 +1,0 @@
-dummy_curvature
-/media/jetson/home/selfdriving/devel/.private/dummy_curvature/cmake.lock /media/jetson/home/selfdriving/devel/./cmake.lock
-/media/jetson/home/selfdriving/devel/.private/dummy_curvature/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake /media/jetson/home/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig.cmake
-/media/jetson/home/selfdriving/devel/.private/dummy_curvature/share/dummy_curvature/cmake/dummy_curvatureConfig-version.cmake /media/jetson/home/selfdriving/devel/share/dummy_curvature/cmake/dummy_curvatureConfig-version.cmake
-/media/jetson/home/selfdriving/devel/.private/dummy_curvature/lib/pkgconfig/dummy_curvature.pc /media/jetson/home/selfdriving/devel/lib/pkgconfig/dummy_curvature.pc

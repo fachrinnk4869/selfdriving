@@ -1,1 +1,0 @@
-/media/jetson/home/selfdriving/devel/.private/ultralytics_ros/share/roseus/ros/ultralytics_ros/manifest.l

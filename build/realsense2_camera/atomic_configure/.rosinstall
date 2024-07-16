@@ -1,2 +1,0 @@
-- setup-file:
-    local-name: /media/jetson/home/selfdriving/devel/.private/realsense2_camera/setup.sh

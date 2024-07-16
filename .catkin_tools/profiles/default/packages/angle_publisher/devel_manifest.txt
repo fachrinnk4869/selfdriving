@@ -1,7 +1,0 @@
-angle_publisher
-/media/jetson/home/selfdriving/devel/.private/angle_publisher/cmake.lock /media/jetson/home/selfdriving/devel/./cmake.lock
-/media/jetson/home/selfdriving/devel/.private/angle_publisher/share/angle_publisher/cmake/angle_publisherConfig-version.cmake /media/jetson/home/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig-version.cmake
-/media/jetson/home/selfdriving/devel/.private/angle_publisher/share/angle_publisher/cmake/angle_publisherConfig.cmake /media/jetson/home/selfdriving/devel/share/angle_publisher/cmake/angle_publisherConfig.cmake
-/media/jetson/home/selfdriving/devel/.private/angle_publisher/lib/pkgconfig/angle_publisher.pc /media/jetson/home/selfdriving/devel/lib/pkgconfig/angle_publisher.pc
-/media/jetson/home/selfdriving/devel/.private/angle_publisher/lib/angle_publisher/publish_angle.py /media/jetson/home/selfdriving/devel/lib/angle_publisher/publish_angle.py
-/media/jetson/home/selfdriving/devel/.private/angle_publisher/lib/angle_publisher/cmake.lock /media/jetson/home/selfdriving/devel/lib/angle_publisher/cmake.lock

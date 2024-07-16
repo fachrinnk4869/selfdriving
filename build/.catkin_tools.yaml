@@ -1,6 +1,0 @@
-devel_space: /media/jetson/home/selfdriving/devel
-install: false
-install_space: /media/jetson/home/selfdriving/install
-profile: default
-source_space: /media/jetson/home/selfdriving/src
-workspace: /media/jetson/home/selfdriving

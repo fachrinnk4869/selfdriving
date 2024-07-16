@@ -1,7 +1,0 @@
-set(polylannet_SETUP_PY_SETUP_MODULE "distutils.core")
-set(polylannet_SETUP_PY_VERSION "0.0.0")
-set(polylannet_SETUP_PY_SCRIPTS "")
-set(polylannet_SETUP_PY_PACKAGES "utils;lib;cfgs")
-set(polylannet_SETUP_PY_PACKAGE_DIRS "src/utils;src/lib;src/cfgs")
-set(polylannet_SETUP_PY_MODULES "")
-set(polylannet_SETUP_PY_MODULE_DIRS "")

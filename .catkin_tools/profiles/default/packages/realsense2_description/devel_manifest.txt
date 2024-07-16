@@ -1,5 +1,0 @@
-ros-realsense/realsense2_description
-/media/jetson/home/selfdriving/devel/.private/realsense2_description/cmake.lock /media/jetson/home/selfdriving/devel/./cmake.lock
-/media/jetson/home/selfdriving/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake /media/jetson/home/selfdriving/devel/share/realsense2_description/cmake/realsense2_descriptionConfig.cmake
-/media/jetson/home/selfdriving/devel/.private/realsense2_description/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake /media/jetson/home/selfdriving/devel/share/realsense2_description/cmake/realsense2_descriptionConfig-version.cmake
-/media/jetson/home/selfdriving/devel/.private/realsense2_description/lib/pkgconfig/realsense2_description.pc /media/jetson/home/selfdriving/devel/lib/pkgconfig/realsense2_description.pc

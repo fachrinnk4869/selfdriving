@@ -1,3 +1,33 @@
+### Quick Run Instructions
+
+To quickly set up and run the self-driving project, follow these steps:
+
+1. **Clone the Repository**
+   ```bash
+   git clone https://github.com/fachrinnk4869/selfdriving
+   cd selfdriving
+   ```
+
+2. **Clean Up Workspace**
+   ```bash
+   rm -rf logs build devel
+   ```
+
+3. **Build the Catkin Workspace**
+   ```bash
+   catkin build
+   ```
+
+4. **Run the Brio Camera Node**
+   ```bash
+   rosrun cv_camera cv_camera_node _cv_cap_prop_frame_width:=640 _cv_cap_prop_frame_height:=480
+   ```
+
+5. **Launch YOLOP Lane Detection**
+   ```bash
+   roslaunch yolop lane_camera.launch
+   ```
+
 ### Installation and Setup
 
 #### Install ROS Noetic

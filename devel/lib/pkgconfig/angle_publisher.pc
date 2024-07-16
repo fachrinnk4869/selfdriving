@@ -1,1 +1,0 @@
-/media/jetson/home/selfdriving/devel/.private/angle_publisher/lib/pkgconfig/angle_publisher.pc

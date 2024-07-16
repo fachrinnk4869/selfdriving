@@ -1,8 +1,0 @@
-prefix=/media/jetson/home/selfdriving/devel/.private/yolop
-
-Name: yolop
-Description: Description of yolop
-Version: 0.0.0
-Cflags: 
-Libs: -L${prefix}/lib 
-Requires: 
