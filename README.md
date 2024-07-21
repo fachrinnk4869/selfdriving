@@ -17,13 +17,20 @@ To quickly set up and run the self-driving project, follow these steps:
    ```bash
    catkin build
    ```
-
-4. **Run the Brio Camera Node**
+4. **Install model for yolov2 and polylannet**
+   ```bash
+   bash model.bash
+   ```
+5. **Install requirements**
+   ```bash
+   pip install -r requirements.txt
+   ```
+6. **Run the Brio Camera Node**
    ```bash
    rosrun cv_camera cv_camera_node _cv_cap_prop_frame_width:=640 _cv_cap_prop_frame_height:=480
    ```
 
-5. **Launch YOLOP Lane Detection**
+7. **Launch YOLOP Lane Detection**
    ```bash
    roslaunch yolop lane_camera.launch
    ```
@@ -75,6 +82,16 @@ To quickly set up and run the self-driving project, follow these steps:
    mkdir -p ~/catkin_ws/src
    cd ~/catkin_ws/
    catkin_make
+   ```
+
+#### Install `dependency`
+1. **Install model for yolov2 and polylannet**
+   ```bash
+   bash model.bash
+   ```
+2. **Install requirements**
+   ```bash
+   pip install -r requirements.txt
    ```
 
 #### Install `ros-realsense`
