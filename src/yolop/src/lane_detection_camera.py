@@ -10,7 +10,7 @@ import numpy as np
 import roslib.packages
 
 # Import necessary functions from utils.utils
-from yolop.utils.utils import (
+from yolop.utils.utils_camera import (
     time_synchronized,
     select_device,
     increment_path,
