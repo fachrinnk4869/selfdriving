@@ -31,12 +31,14 @@ path = roslib.packages.get_pkg_dir("yolop")
 
 # Initialize cv_bridge
 bridge = CvBridge()
+
+
 def letterbox(img, new_shape=(640, 640), color=(114, 114, 114), auto=True, scaleFill=False, scaleup=True, stride=32):
     # Resize and pad image while meeting stride-multiple constraints
     shape = img.shape[:2]  # current shape [height, width]
     if isinstance(new_shape, int):
         new_shape = (new_shape, new_shape)
-    #print(sem_img.shape)
+    # print(sem_img.shape)
     # Scale ratio (new / old)
     r = min(new_shape[0] / shape[0], new_shape[1] / shape[1])
 
@@ -46,26 +48,31 @@ def letterbox(img, new_shape=(640, 640), color=(114, 114, 114), auto=True, scale
     # Compute padding
     ratio = r, r  # width, height ratios
     new_unpad = int(round(shape[1] * r)), int(round(shape[0] * r))
-    dw, dh = new_shape[1] - new_unpad[0], new_shape[0] - new_unpad[1]  # wh padding
+    dw, dh = new_shape[1] - new_unpad[0], new_shape[0] - \
+        new_unpad[1]  # wh padding
     if auto:  # minimum rectangle
         dw, dh = np.mod(dw, stride), np.mod(dh, stride)  # wh padding
     elif scaleFill:  # stretch
         dw, dh = 0.0, 0.0
         new_unpad = (new_shape[1], new_shape[0])
-        ratio = new_shape[1] / shape[1], new_shape[0] / shape[0]  # width, height ratios
+        ratio = new_shape[1] / shape[1], new_shape[0] / \
+            shape[0]  # width, height ratios
 
     dw /= 2  # divide padding into 2 sides
     dh /= 2
 
     if shape[::-1] != new_unpad:  # resize
         img = cv2.resize(img, new_unpad, interpolation=cv2.INTER_LINEAR)
-     
+
     top, bottom = int(round(dh - 0.1)), int(round(dh + 0.1))
     left, right = int(round(dw - 0.1)), int(round(dw + 0.1))
 
-    img = cv2.copyMakeBorder(img, top, bottom, left, right, cv2.BORDER_CONSTANT, value=color)  # add border
-    
+    img = cv2.copyMakeBorder(
+        img, top, bottom, left, right, cv2.BORDER_CONSTANT, value=color)  # add border
+
     return img, ratio, (dw, dh)
+
+
 def detect(cv_image=None):
     # Fetch ROS parameters
     weights = rospy.get_param('~weights', f'src/yolop/data/weights/yolopv2.pt')
@@ -83,12 +90,16 @@ def detect(cv_image=None):
     name = rospy.get_param('~name', 'exp')
     exist_ok = rospy.get_param('~exist_ok', False)
     save_img = not nosave and not source.endswith('.txt')
-    
+    fps_pub = rospy.Publisher('fps', Float32, queue_size=10)
     left_curve_pub = rospy.Publisher('left_lane_curve', Float32, queue_size=10)
-    right_curve_pub = rospy.Publisher('right_lane_curve', Float32, queue_size=10)
-    center_curve_pub = rospy.Publisher('center_lane_curve', Float32, queue_size=10)
-    save_dir = Path(increment_path(Path(project) / name, exist_ok=exist_ok))  # increment run
-    (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True, exist_ok=True)  # make dir
+    right_curve_pub = rospy.Publisher(
+        'right_lane_curve', Float32, queue_size=10)
+    center_curve_pub = rospy.Publisher(
+        'center_lane_curve', Float32, queue_size=10)
+    save_dir = Path(increment_path(Path(project) / name,
+                    exist_ok=exist_ok))  # increment run
+    (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True,
+                                                          exist_ok=True)  # make dir
     inf_time = AverageMeter()
     waste_time = AverageMeter()
     nms_time = AverageMeter()
@@ -101,7 +112,7 @@ def detect(cv_image=None):
     model = model.to(device)
 
     if half:
-        model.half()  # to FP16  
+        model.half()  # to FP16
     model.eval()
 
     # Set Dataloader
@@ -110,7 +121,8 @@ def detect(cv_image=None):
         dataset = LoadImages(source, img_size=imgsz, stride=stride)
     else:
         # Padded resize
-        img0 = cv2.resize(cv_image, (1280,720), interpolation=cv2.INTER_LINEAR)
+        img0 = cv2.resize(cv_image, (1280, 720),
+                          interpolation=cv2.INTER_LINEAR)
         img = letterbox(img0, 640, stride=32)[0]
 
         # Convert
@@ -120,7 +132,8 @@ def detect(cv_image=None):
 
     # Run inference
     if device.type != 'cpu':
-        model(torch.zeros(1, 3, imgsz, imgsz).to(device).type_as(next(model.parameters())))  # run once
+        model(torch.zeros(1, 3, imgsz, imgsz).to(device).type_as(
+            next(model.parameters())))  # run once
     t0 = time.time()
     frame_count = 0
     total_fps = 0
@@ -128,7 +141,7 @@ def detect(cv_image=None):
         first_item = next(iter(dataset))
         _, _, initial_im0s, _ = first_item
         ROITrackbar(initial_im0s)
-    
+
     for path, img, im0s, vid_cap in dataset:
         frame_count += 1
         img = torch.from_numpy(img).to(device)
@@ -143,15 +156,16 @@ def detect(cv_image=None):
         [pred, anchor_grid], seg, ll = model(img)
         t2 = time_synchronized()
 
-        # waste time: the incompatibility of torch.jit.trace causes extra time consumption in demo version 
-        # but this problem will not appear in official version 
+        # waste time: the incompatibility of torch.jit.trace causes extra time consumption in demo version
+        # but this problem will not appear in official version
         tw1 = time_synchronized()
         pred = split_for_trace_model(pred, anchor_grid)
         tw2 = time_synchronized()
 
         # Apply NMS
         t3 = time_synchronized()
-        pred = non_max_suppression(pred, conf_thres, iou_thres, classes=classes, agnostic=agnostic_nms)
+        pred = non_max_suppression(
+            pred, conf_thres, iou_thres, classes=classes, agnostic=agnostic_nms)
         t4 = time_synchronized()
 
         fps = 1 / (t2 - t1)  # Forward pass FPS.
@@ -167,21 +181,25 @@ def detect(cv_image=None):
             save_path = str(save_dir / "cv_image")  # img.jpg
             txt_path = str(save_dir / 'labels' / "cv_image")  # img.txt
             s += '%gx%g ' % img.shape[2:]  # print string
-            gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]  # normalization gain whwh
+            # normalization gain whwh
+            gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]
             if len(det):
                 # Rescale boxes from img_size to im0 size
-                det[:, :4] = scale_coords(img.shape[2:], det[:, :4], im0.shape).round()
+                det[:, :4] = scale_coords(
+                    img.shape[2:], det[:, :4], im0.shape).round()
 
                 # Print results
                 for c in det[:, -1].unique():
                     n = (det[:, -1] == c).sum()  # detections per class
-                    #s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
+                    # s += f"{n} {names[int(c)]}{'s' * (n > 1)}, "  # add to string
 
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
                     if save_txt:  # Write to file
-                        xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)) / gn).view(-1).tolist()  # normalized xywh
-                        line = (cls, *xywh, conf) if save_conf else (cls, *xywh)  # label format
+                        xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)
+                                          ) / gn).view(-1).tolist()  # normalized xywh
+                        # label format
+                        line = (cls, *xywh, conf) if save_conf else (cls, *xywh)
                         with open(txt_path + '.txt', 'a') as f:
                             f.write(('%g ' * len(line)).rstrip() % line + '\n')
 
@@ -192,7 +210,8 @@ def detect(cv_image=None):
 
             # Print time (inference)
             print(f'{s}Done. ({t2 - t1:.3f}s)')
-            output_image, left_curve, right_curve, center_curve = show_seg_result(im0, ll_seg_mask, is_demo=True)
+            output_image, left_curve, right_curve, center_curve = show_seg_result(
+                im0, ll_seg_mask, is_demo=True)
             try:
                 left_curve_pub.publish(left_curve)
             except NameError:
@@ -206,7 +225,7 @@ def detect(cv_image=None):
                 center_curve_pub.publish(center_curve)
             except NameError:
                 rospy.logwarn("Center curve not calculated.")
-                
+            fps_pub.publish(fps)
             cv2.putText(
                 output_image,
                 text=f"YOLOPv2 FPS: {fps:.1f}",
@@ -244,10 +263,12 @@ def detect(cv_image=None):
     inf_time.update(t2 - t1, img.size(0))
     nms_time.update(t4 - t3, img.size(0))
     waste_time.update(tw2 - tw1, img.size(0))
-    print('inf : (%.4fs/frame)   nms : (%.4fs/frame)' % (inf_time.avg, nms_time.avg))
+    print('inf : (%.4fs/frame)   nms : (%.4fs/frame)' %
+          (inf_time.avg, nms_time.avg))
     print(f'Done. ({time.time() - t0:.3f}s)')
     print(f"Average FPS: {(total_fps / frame_count):.1f}")
     # cv2.destroyAllWindows()
+
 
 def image_callback(msg):
     try:
@@ -257,17 +278,18 @@ def image_callback(msg):
     except CvBridgeError as e:
         rospy.logerr(f"CvBridge Error: {e}")
 
+
 if __name__ == '__main__':
     rospy.init_node('lane_detection_camera')
     path = roslib.packages.get_pkg_dir("yolop")
-    
+
     # Subscribe to the camera topic
     rospy.Subscriber("/cv_camera/image_raw", Image, image_callback)
-    
+
     with torch.no_grad():
         # Initial call to detect in case of using image files
         if not rospy.has_param('/cv_camera/image_raw'):
             detect()
-    
+
     rospy.spin()
     cv2.destroyAllWindows()
