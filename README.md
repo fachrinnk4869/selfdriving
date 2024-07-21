@@ -175,7 +175,11 @@ source devel/setup.bash
 roslaunch ultralytics_ros tracker.launch debug:=true
 ```
 
-#### Lane Detection with YOLOPv2 (Video)
+#### Lane Detection with YOLOPv2 without postprocessing (Video)
+```bash
+roslaunch yolop lane_raw.launch
+```
+#### Lane Detection with YOLOPv2 (Video + postprocessing)
 ```bash
 roslaunch yolop lane_video.launch
 ```

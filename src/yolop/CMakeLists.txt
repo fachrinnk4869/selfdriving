@@ -163,11 +163,7 @@ include_directories(
 catkin_install_python(PROGRAMS
   src/lane_detection_node.py
   src/lane_detection_camera.py
-  DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
-)
-install(PROGRAMS
-  src/lane_detection_node.py
-  src/lane_detection_camera.py
+  src/lane_detection_raw.py
   DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
 )
 find_package(catkin REQUIRED COMPONENTS roslaunch)
