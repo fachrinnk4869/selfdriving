@@ -17,13 +17,13 @@ To quickly set up and run the self-driving project, follow these steps:
    ```bash
    catkin build
    ```
-4. **Install model for yolov2 and polylannet**
-   ```bash
-   bash model.bash
-   ```
-5. **Install requirements**
+4. **Install requirements**
    ```bash
    pip install -r requirements.txt
+   ```
+5. **Install model for yolov2 and polylannet**
+   ```bash
+   bash model.bash
    ```
 6. **Run the Brio Camera Node**
    ```bash
@@ -85,13 +85,13 @@ To quickly set up and run the self-driving project, follow these steps:
    ```
 
 #### Install `dependency`
-1. **Install model for yolov2 and polylannet**
-   ```bash
-   bash model.bash
-   ```
-2. **Install requirements**
+1. **Install requirements**
    ```bash
    pip install -r requirements.txt
+   ```
+2. **Install model for yolov2 and polylannet**
+   ```bash
+   bash model.bash
    ```
 
 #### Install `ros-realsense`
