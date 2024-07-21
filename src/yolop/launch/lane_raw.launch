@@ -2,7 +2,7 @@
 
 <launch>
     <!-- Start lane_detection_node -->
-    <node name="lane_detection_node" pkg="yolop" type="lane_detection_raw.py" output='screen'>
+    <node name="lane_detection_raw_node" pkg="yolop" type="lane_detection_raw.py" output='screen'>
         <!-- ROS parameters for lane_detection_node -->
         <param name="weights" type="string" value="$(find yolop)/src/yolop/data/weights/yolopv2.pt"/>
         <param name="source" type="string" value="$(find yolop)/src/yolop/input/jalan.mp4"/>

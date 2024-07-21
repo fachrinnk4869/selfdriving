@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import time
 from pathlib import Path
 import cv2
@@ -201,7 +202,7 @@ def detect():
 
 
 if __name__ == '__main__':
-    rospy.init_node('lane_detection_node')
+    rospy.init_node('lane_detection_raw_node')
     path = roslib.packages.get_pkg_dir("yolop")
     # opt = rospy.get_param('~lane_detection_node_params')
     # print(opt)
