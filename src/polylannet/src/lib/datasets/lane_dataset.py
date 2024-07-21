@@ -37,12 +37,13 @@ class LaneDataset(Dataset):
                              for aug in augmentations]  # add augmentation
 
         self.normalize = normalize
-        transformations = iaa.Sequential([Resize({'height': self.img_h, 'width': self.img_w})])
+        transformations = iaa.Sequential(
+            [Resize({'height': self.img_h, 'width': self.img_w})])
         self.to_tensor = ToTensor()
-        self.transform = iaa.Sequential([iaa.Sometimes(then_list=augmentations, p=aug_chance), transformations])
+        self.transform = iaa.Sequential(
+            [iaa.Sometimes(then_list=augmentations, p=aug_chance), transformations])
 
-
-    def draw_annotation(self, img_path, pred=None, cls_pred=None):
+    def draw_annotation(self, img_path, order, pred=None, cls_pred=None):
         img = self.__getitem__(img_path)
         img = img.permute(1, 2, 0).numpy()
         # Unnormalize
@@ -64,7 +65,11 @@ class LaneDataset(Dataset):
             lane = lane[1:]  # remove conf
             lower, upper = lane[0], lane[1]
             lane = lane[2:]  # remove upper, lower positions
-            # lane = lane[2:]  # elminate order 3 
+            if order == 1:
+                lane = lane[2:]  # order 1
+                # print("aiku order 1")
+            elif order == 2:
+                lane = lane[1:]  # order 2
             # generate points from the polynomial
             ys = np.linspace(lower, upper, num=100)
             points = np.zeros((len(ys), 2), dtype=np.int32)
@@ -74,7 +79,8 @@ class LaneDataset(Dataset):
 
             # draw lane with a polyline on the overlay
             for current_point, next_point in zip(points[:-1], points[1:]):
-                overlay = cv2.line(overlay, tuple(current_point), tuple(next_point), color=color, thickness=2)
+                overlay = cv2.line(overlay, tuple(current_point), tuple(
+                    next_point), color=color, thickness=2)
 
             # draw class icon
             if cls_pred is not None and len(points) > 0:
@@ -83,7 +89,8 @@ class LaneDataset(Dataset):
                 mid = tuple(points[len(points) // 2] - 60)
                 x, y = mid
 
-                img[y:y + class_icon.shape[0], x:x + class_icon.shape[1]] = class_icon
+                img[y:y + class_icon.shape[0], x:x +
+                    class_icon.shape[1]] = class_icon
 
         # Add lanes overlay
         w = 0.6
@@ -107,7 +114,7 @@ class LaneDataset(Dataset):
 
     def __getitem__(self, img):
         # img = cv2.imread(img_path)
-        img= self.transform(image=img)
+        img = self.transform(image=img)
 
         img = img / 255.
         if self.normalize:

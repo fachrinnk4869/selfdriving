@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 import os
 import sys
 import random
@@ -55,7 +56,7 @@ def warp_perspective(img, src_points, dst_points, output_size):
     return warped_img
 
 
-def test(model, test_loader, exp_root, cfg, view, epoch, max_batches=None, verbose=True):
+def test(model, test_loader, exp_root, cfg, view, epoch, order, max_batches=None, verbose=True):
     fps_pub = rospy.Publisher('fps', Float32, queue_size=10)
 
     if verbose:
@@ -73,7 +74,7 @@ def test(model, test_loader, exp_root, cfg, view, epoch, max_batches=None, verbo
     fps = cap.get(cv2.CAP_PROP_FPS)
     frame_width = int(cap.get(cv2.CAP_PROP_FRAME_WIDTH))
     frame_height = int(cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-    
+
     # Define the horizontal crop dimensions (example: crop 100 pixels from left and right)
     crop_left = 200
     crop_right = 200
@@ -142,6 +143,7 @@ def test(model, test_loader, exp_root, cfg, view, epoch, max_batches=None, verbo
             outputs, extra_outputs = outputs
             preds = test_loader.dataset.draw_annotation(
                 img_path=warped_img,
+                order=order,
                 pred=outputs[0].cpu().numpy(),
                 cls_pred=extra_outputs[0].cpu().numpy() if extra_outputs is not None else None)
             # Ensure preds is a valid image matrix
@@ -160,24 +162,14 @@ def test(model, test_loader, exp_root, cfg, view, epoch, max_batches=None, verbo
     return 0
 
 
-def parse_args():
-    parser = argparse.ArgumentParser(description="Lane regression")
-    parser.add_argument("--exp_name", default="exp", help="Experiment name")
-    parser.add_argument(
-        "--cfg", default="cfgs/tusimple_resnet50.yaml", help="Config file")
-    parser.add_argument("--epoch", type=int, default=2695,
-                        help="Epoch to test the model on")
-    parser.add_argument("--batch_size", type=int,
-                        help="Number of images per batch")
-    parser.add_argument("--view", action="store_true", help="Show predictions")
-
-    return parser.parse_args()
-
-
 if __name__ == "__main__":
-    rospy.init_node('polylannet')
-    args = parse_args()
-    cfg = Config(args.cfg)
+    rospy.init_node('polylannet_node', anonymous=True)
+    cfg = "cfgs/tusimple_resnet50.yaml"
+    epoch = 2695
+    exp_name = "exp"
+    batch_size = None
+    view = False
+    cfg = Config(cfg)
 
     # Set up seeds
     torch.manual_seed(cfg['seed'])
@@ -186,32 +178,31 @@ if __name__ == "__main__":
 
     # Set up logging
     exp_root = os.path.join(cfg['exps_dir'], os.path.basename(
-        os.path.normpath(args.exp_name)))
+        os.path.normpath(exp_name)))
 
-    logging.info("Experiment name: {}".format(args.exp_name))
+    logging.info("Experiment name: {}".format(exp_name))
     logging.info("Config:\n" + str(cfg))
-    logging.info("Args:\n" + str(args))
 
     # Device configuration
     device = torch.device("cuda:0" if torch.cuda.is_available() else "cpu")
 
     # Hyper parameters
     num_epochs = cfg["epochs"]
-    batch_size = cfg["batch_size"] if args.batch_size is None else args.batch_size
+    batch_size = cfg["batch_size"] if batch_size is None else batch_size
 
     # Model
     model = cfg.get_model().to(device)
-    test_epoch = args.epoch
+    test_epoch = epoch
 
     # Get data set
     test_dataset = cfg.get_dataset("test")
 
     test_loader = torch.utils.data.DataLoader(dataset=test_dataset,
-                                              batch_size=batch_size if args.view is False else 1,
+                                              batch_size=batch_size if view is False else 1,
                                               shuffle=False,
                                               num_workers=8)
     # Eval results
     evaluator = Evaluator(test_loader.dataset, exp_root)
-
+    order = rospy.get_param('~order')
     mean_loss = test(model, test_loader, exp_root, cfg,
-                     epoch=test_epoch, view=args.view)
+                     epoch=test_epoch, view=view, order=order)

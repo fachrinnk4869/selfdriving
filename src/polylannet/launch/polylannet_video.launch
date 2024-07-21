@@ -1,0 +1,9 @@
+<launch>
+    <arg name="order_arg" default="3" />
+    <!-- Start lane_detection_node -->
+    <node name="polylannet_node" pkg="polylannet" type="infer.py" output='screen'>
+        <!-- ROS parameters for lane_detection_node -->
+        <param name="order" type="int" value="$(arg order_arg)" />
+        
+    </node>
+</launch>
