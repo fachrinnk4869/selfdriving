@@ -74,6 +74,7 @@ def letterbox(img, new_shape=(640, 640), color=(114, 114, 114), auto=True, scale
 
 
 def detect(cv_image=None):
+    t1 = time_synchronized()
     # Fetch ROS parameters
     weights = rospy.get_param('~weights', f'src/yolop/data/weights/yolopv2.pt')
     source = rospy.get_param('~source', f'src/yolop/input/drive.mp4')
@@ -100,9 +101,6 @@ def detect(cv_image=None):
                     exist_ok=exist_ok))  # increment run
     (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True,
                                                           exist_ok=True)  # make dir
-    inf_time = AverageMeter()
-    waste_time = AverageMeter()
-    nms_time = AverageMeter()
 
     # Load model
     stride = 32
@@ -141,7 +139,6 @@ def detect(cv_image=None):
         first_item = next(iter(dataset))
         _, _, initial_im0s, _ = first_item
         ROITrackbar(initial_im0s)
-
     for path, img, im0s, vid_cap in dataset:
         frame_count += 1
         img = torch.from_numpy(img).to(device)
@@ -152,7 +149,6 @@ def detect(cv_image=None):
             img = img.unsqueeze(0)
 
         # Inference
-        t1 = time_synchronized()
         [pred, anchor_grid], seg, ll = model(img)
         t2 = time_synchronized()
 
@@ -168,8 +164,7 @@ def detect(cv_image=None):
             pred, conf_thres, iou_thres, classes=classes, agnostic=agnostic_nms)
         t4 = time_synchronized()
 
-        fps = 1 / (t2 - t1)  # Forward pass FPS.
-        total_fps += fps
+        # total_fps += fps
 
         # da_seg_mask = driving_area_mask(seg)
         ll_seg_mask = lane_line_mask(ll)
@@ -209,7 +204,7 @@ def detect(cv_image=None):
                     print(cls)
 
             # Print time (inference)
-            print(f'{s}Done. ({t2 - t1:.3f}s)')
+            # print(f'{s}Done. ({t2 - t1:.3f}s)')
             output_image, left_curve, right_curve, center_curve = show_seg_result(
                 im0, ll_seg_mask, is_demo=True)
             try:
@@ -225,7 +220,9 @@ def detect(cv_image=None):
                 center_curve_pub.publish(center_curve)
             except NameError:
                 rospy.logwarn("Center curve not calculated.")
+            fps = 1 / (time_synchronized() - t1)  # Forward pass FPS.
             fps_pub.publish(fps)
+            print("FPS: ", fps)
             cv2.putText(
                 output_image,
                 text=f"YOLOPv2 FPS: {fps:.1f}",
@@ -259,14 +256,6 @@ def detect(cv_image=None):
 
             if cv_image is not None or cv2.waitKey(1) & 0xFF == ord('q'):
                 break
-
-    inf_time.update(t2 - t1, img.size(0))
-    nms_time.update(t4 - t3, img.size(0))
-    waste_time.update(tw2 - tw1, img.size(0))
-    print('inf : (%.4fs/frame)   nms : (%.4fs/frame)' %
-          (inf_time.avg, nms_time.avg))
-    print(f'Done. ({time.time() - t0:.3f}s)')
-    print(f"Average FPS: {(total_fps / frame_count):.1f}")
     # cv2.destroyAllWindows()
 
 

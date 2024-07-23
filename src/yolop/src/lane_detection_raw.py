@@ -27,8 +27,11 @@ from yolop.utils.utils_raw import (
 
 path = roslib.packages.get_pkg_dir("yolop")
 
+t1 = time_synchronized()
+
 
 def detect():
+    global t1
     # Fetch ROS parameters
     weights = rospy.get_param('~weights', f'src/yolop/data/weights/yolopv2.pt')
     source = rospy.get_param('~source', f'src/yolop/input/drive.mp4')
@@ -90,7 +93,6 @@ def detect():
             img = img.unsqueeze(0)
 
         # Inference
-        t1 = time_synchronized()
         [pred, anchor_grid], seg, ll = model(img)
         t2 = time_synchronized()
 
@@ -106,7 +108,8 @@ def detect():
             pred, conf_thres, iou_thres, classes=classes, agnostic=agnostic_nms)
         t4 = time_synchronized()
 
-        fps = 1 / (t2 - t1)  # Forward pass FPS.
+        fps = 1 / (time_synchronized() - t1)  # Forward pass FPS.
+        t1 = time_synchronized()
         total_fps += fps
 
         da_seg_mask = driving_area_mask(seg)
