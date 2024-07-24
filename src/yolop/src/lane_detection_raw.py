@@ -51,14 +51,6 @@ def detect():
 
     fps_pub = rospy.Publisher('fps', Float32, queue_size=10)
 
-    save_dir = Path(increment_path(Path(project) / name,
-                    exist_ok=exist_ok))  # increment run
-    (save_dir / 'labels' if save_txt else save_dir).mkdir(parents=True,
-                                                          exist_ok=True)  # make dir
-    inf_time = AverageMeter()
-    waste_time = AverageMeter()
-    nms_time = AverageMeter()
-
     # Load model
     stride = 32
     model = torch.jit.load(weights)
@@ -71,18 +63,14 @@ def detect():
     model.eval()
 
     # Set Dataloader
-    vid_path, vid_writer = None, None
     dataset = LoadImages(source, img_size=imgsz, stride=stride)
 
     # Run inference
     if device.type != 'cpu':
         model(torch.zeros(1, 3, imgsz, imgsz).to(device).type_as(
             next(model.parameters())))  # run once
-    t0 = time.time()
     frame_count = 0
     total_fps = 0
-    first_item = next(iter(dataset))
-    _, _, initial_im0s, _ = first_item
     for path, img, im0s, vid_cap in dataset:
         frame_count += 1
         img = torch.from_numpy(img).to(device)
@@ -94,19 +82,14 @@ def detect():
 
         # Inference
         [pred, anchor_grid], seg, ll = model(img)
-        t2 = time_synchronized()
 
         # waste time: the incompatibility of torch.jit.trace causes extra time consumption in demo version
         # but this problem will not appear in official version
-        tw1 = time_synchronized()
         pred = split_for_trace_model(pred, anchor_grid)
-        tw2 = time_synchronized()
 
         # Apply NMS
-        t3 = time_synchronized()
         pred = non_max_suppression(
             pred, conf_thres, iou_thres, classes=classes, agnostic=agnostic_nms)
-        t4 = time_synchronized()
 
         fps = 1 / (time_synchronized() - t1)  # Forward pass FPS.
         t1 = time_synchronized()
@@ -119,10 +102,6 @@ def detect():
         for i, det in enumerate(pred):  # detections per image
             p, s, im0, frame = path, '', im0s, getattr(dataset, 'frame', 0)
 
-            p = Path(p)  # to Path
-            save_path = str(save_dir / p.name)  # img.jpg
-            txt_path = str(save_dir / 'labels' / p.stem) + \
-                ('' if dataset.mode == 'image' else f'_{frame}')  # img.txt
             s += '%gx%g ' % img.shape[2:]  # print string
             # normalization gain whwh
             gn = torch.tensor(im0.shape)[[1, 0, 1, 0]]
@@ -138,13 +117,6 @@ def detect():
 
                 # Write results
                 for *xyxy, conf, cls in reversed(det):
-                    if save_txt:  # Write to file
-                        xywh = (xyxy2xywh(torch.tensor(xyxy).view(1, 4)
-                                          ) / gn).view(-1).tolist()  # normalized xywh
-                        # label format
-                        line = (cls, *xywh, conf) if save_conf else (cls, *xywh)
-                        with open(txt_path + '.txt', 'a') as f:
-                            f.write(('%g ' * len(line)).rstrip() % line + '\n')
 
                     if save_img:  # Add bbox to image
                         plot_one_box(xyxy, im0, line_thickness=3)
@@ -152,7 +124,6 @@ def detect():
                     print(cls)
 
             # Print time (inference)
-            print(f'{s}Done. ({t2 - t1:.3f}s)')
             show_seg_result(im0, (da_seg_mask, ll_seg_mask), is_demo=True)
             fps_pub.publish(fps)
             cv2.putText(
@@ -168,40 +139,8 @@ def detect():
             cv2.imshow('Image', im0)
             cv2.waitKey(1)
 
-            # Save results (image with detections)
-            if save_img:
-                if dataset.mode == 'image':
-                    cv2.imwrite(save_path, im0)
-                    print(
-                        f" The image with the result is saved in: {save_path}")
-                else:  # 'video' or 'stream'
-                    if vid_path != save_path:  # new video
-                        vid_path = save_path
-                        if isinstance(vid_writer, cv2.VideoWriter):
-                            vid_writer.release()  # release previous video writer
-                        if vid_cap:  # video
-                            fps = vid_cap.get(cv2.CAP_PROP_FPS)
-                            # w = int(vid_cap.get(cv2.CAP_PROP_FRAME_WIDTH))
-                            # h = int(vid_cap.get(cv2.CAP_PROP_FRAME_HEIGHT))
-                            w, h = im0.shape[1], im0.shape[0]
-                        else:  # stream
-                            fps, w, h = 30, im0.shape[1], im0.shape[0]
-                            save_path += '.mp4'
-                        vid_writer = cv2.VideoWriter(
-                            save_path, cv2.VideoWriter_fourcc(*'mp4v'), fps, (w, h))
-                    vid_writer.write(im0)
-
             if cv2.waitKey(1) & 0xFF == ord('q'):
                 break
-
-    inf_time.update(t2 - t1, img.size(0))
-    nms_time.update(t4 - t3, img.size(0))
-    waste_time.update(tw2 - tw1, img.size(0))
-    print('inf : (%.4fs/frame)   nms : (%.4fs/frame)' %
-          (inf_time.avg, nms_time.avg))
-    print(f'Done. ({time.time() - t0:.3f}s)')
-    print(f"Average FPS: {(total_fps / frame_count):.1f}")
-    # cv2.destroyALlWindows()
 
 
 if __name__ == '__main__':
