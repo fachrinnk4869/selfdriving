@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<launch>
+    <!-- Start lane_detection_node -->
+    <node name="lane_detection_camera" pkg="yolop" type="schema2_node.py" output='screen'>
+        <!-- ROS parameters for lane_detection_camera -->
+        <param name="weights" type="string" value="$(find yolop)/src/yolop/data/weights/yolopv2.pt"/>
+        <param name="source" type="string" value="0"/>
+        <param name="img_size" type="int" value="640"/>
+        <param name="conf_thres" type="double" value="0.3"/>
+        <param name="iou_thres" type="double" value="0.45"/>
+        <param name="device" type="string" value="0"/>
+        <param name="save_conf" type="bool" value="false"/>
+        <param name="save_txt" type="bool" value="false"/>
+        <param name="nosave" type="bool" value="false"/>
+        <param name="agnostic_nms" type="bool" value="false"/>
+        <param name="project" type="string" value="$(find yolop)/src/yolop/runs/detect"/>
+        <param name="name" type="string" value="exp"/>
+        <param name="exist_ok" type="bool" value="false"/>
+    </node>
+</launch>

@@ -9,27 +9,16 @@ from cv_bridge import CvBridge, CvBridgeError
 import numpy as np
 import roslib.packages
 
-# Import necessary functions from utils.utils
-from yolop.utils.utils_camera import (
-    time_synchronized,
-    select_device,
-    increment_path,
-    scale_coords,
-    xyxy2xywh,
-    non_max_suppression,
-    split_for_trace_model,
-    driving_area_mask,
-    lane_line_mask,
-    plot_one_box,
-    show_seg_result,
-    AverageMeter,
-    LoadImages,
-    ROITrackbar
-)
+
+# Conclude setting / general reprocessing / plots / metrices / datasets
+from yolop.utils.utils_camera import \
+    time_synchronized, select_device, increment_path, \
+    scale_coords, xyxy2xywh, non_max_suppression, split_for_trace_model, \
+    driving_area_mask, lane_line_mask, plot_one_box, show_seg_result, \
+    AverageMeter, \
+    LoadImages
 
 path = roslib.packages.get_pkg_dir("yolop")
-
-# Initialize cv_bridge
 
 
 def letterbox(img, new_shape=(640, 640), color=(114, 114, 114), auto=True, scaleFill=False, scaleup=True, stride=32):
@@ -212,30 +201,34 @@ class Yolop():
                     break
 
 
-class LaneDetectionNode:
-    def __init__(self):
-        self.bridge = CvBridge()
-        self.lane_detector = Yolop()
-
-        # Subscribe to the camera topic
-        rospy.Subscriber("/cv_camera/image_raw", Image, self.image_callback)
-
-    def image_callback(self, msg):
-        try:
-            # Convert ROS Image message to OpenCV image
-            cv_image = self.bridge.imgmsg_to_cv2(msg, "bgr8")
-            with torch.no_grad():
-                self.lane_detector.detect(cv_image)
-        except CvBridgeError as e:
-            rospy.logerr(f"CvBridge Error: {e}")
-
-
 if __name__ == '__main__':
     rospy.init_node('lane_detection_camera')
     path = roslib.packages.get_pkg_dir("yolop")
+    cap = cv2.VideoCapture(0)
 
-    # Initialize the LaneDetectionNode
-    lane_detection_node = LaneDetectionNode()
+    # Check if the camera opened successfully
+    if not cap.isOpened():
+        print("Error: Could not open camera.")
+        exit()
+    # Set the desired FPS
+    lane_detector = Yolop()
+    while True:
+        # Capture frame-by-frame
+        ret, frame = cap.read()
 
-    rospy.spin()
+        # If frame is read correctly, ret is True
+        if not ret:
+            print("Error: Cannot receive frame (stream end?). Exiting ...")
+            break
+
+        # Display the resulting frame
+        with torch.no_grad():
+            lane_detector.detect(frame)
+
+        # Press 'q' to exit the loop
+        if cv2.waitKey(1) == ord('q'):
+            break
+
+    # Release the camera and close the window
+    cap.release()
     cv2.destroyAllWindows()
