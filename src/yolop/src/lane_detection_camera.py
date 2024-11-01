@@ -93,6 +93,7 @@ class Yolop():
         self.exist_ok = rospy.get_param('~exist_ok', False)
         self.save_img = not self.nosave and not self.source.endswith('.txt')
         self.fps_pub = rospy.Publisher('fps', Float32, queue_size=10)
+        self.lane_dev_pub = rospy.Publisher('lane_deviation', Float32, queue_size=10)
         self.left_curve_pub = rospy.Publisher(
             'left_lane_curve', Float32, queue_size=10)
         self.right_curve_pub = rospy.Publisher(
@@ -176,7 +177,7 @@ class Yolop():
                         print(cls)
 
                 # Print time (inference)
-                output_image, left_curve, right_curve, center_curve = show_seg_result(
+                output_image, left_curve, right_curve, lane_deviation = show_seg_result(
                     im0, ll_seg_mask, is_demo=True)
                 try:
                     self.left_curve_pub.publish(left_curve)
@@ -188,9 +189,9 @@ class Yolop():
                 except NameError:
                     rospy.logwarn("Right curve not calculated.")
                 try:
-                    self.center_curve_pub.publish(center_curve)
+                    self.lane_dev_pub.publish(center_curve)
                 except NameError:
-                    rospy.logwarn("Center curve not calculated.")
+                    rospy.logwarn("Lane Deviation not calculated.")
                 fps = 1 / (time_synchronized() - self.t1)
                 self.t1 = time_synchronized()  # Forward pass FPS.
                 self.fps_pub.publish(fps)

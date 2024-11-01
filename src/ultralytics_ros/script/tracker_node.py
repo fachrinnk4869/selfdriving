@@ -44,7 +44,7 @@ path = roslib.packages.get_pkg_dir("ultralytics_ros")
 
 class TrackerNode:
     def __init__(self):
-        cv2.cuda.setDevice(0)
+        cv2.cuda.setDevice(1)
         self.input_topic = rospy.get_param("~input_topic", "image_raw")
         self.result_topic = rospy.get_param("~result_topic", "yolo_result")
         self.result_image_topic = rospy.get_param(

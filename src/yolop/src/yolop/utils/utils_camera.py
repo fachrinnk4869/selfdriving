@@ -501,7 +501,8 @@ def show_seg_result(img, result, palette=None, is_demo=True):
             right_curve), (50, 150), font, 1, (255, 255, 255), 2, cv2.LINE_AA)
     except:
         print("hey")
-
+    # initialization lane deviation    
+    lane_deviation = None
     try:
         center = (left_intercept + right_intercept) / 2.0
 
@@ -539,7 +540,7 @@ def show_seg_result(img, result, palette=None, is_demo=True):
         img_with_roi, src_points, dst_points, (width, height))
     # cv2.imshow('bird_eye2', warped_img)
     # cv2.waitKey(1)
-    return result, left_curve, right_curve, None
+    return result, left_curve, right_curve, lane_deviation
 
 
 def increment_path(path, exist_ok=True, sep=''):

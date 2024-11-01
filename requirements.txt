@@ -43,8 +43,8 @@ xmljson
 lxml
 progressbar
 scikit-learn 
-scipy 
-matplotlib
+# scipy 
+# matplotlib
 ujson
 tabulate
 gdown
